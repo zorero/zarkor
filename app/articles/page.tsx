@@ -5,7 +5,7 @@ import { PageHero } from "../components/PageHero";
 
 export const metadata: Metadata = {
   title: "מאמרים על גברים, רגשות ושינוי",
-  description: "מחשבות וכלים על גבריות, זוגיות, קבלת החלטות, הורות וחיבור רגשי מאת אביחי זרקור.",
+  description: "מחשבות וכלים על גבריות, זוגיות, קבלת החלטות, הורות וחיבור רגשי מאת אביחי צוררו.",
   alternates: { canonical: "/articles" },
 };
 

@@ -17,7 +17,7 @@ import { CallToAction } from "./components/CallToAction";
 export const metadata: Metadata = {
   title: "אימון אישי לגברים באשדוד",
   description:
-    "אימון אישי לגברים שרוצים להבין מה באמת עוצר אותם, לקבל החלטות וליצור שינוי שמחזיק. עם אביחי זרקור, בקליניקה באשדוד או בזום.",
+    "אימון אישי לגברים שרוצים להבין מה באמת עוצר אותם, לקבל החלטות וליצור שינוי שמחזיק. עם אביחי צוררו, בקליניקה באשדוד או בזום.",
   alternates: { canonical: "/" },
 };
 
@@ -107,7 +107,7 @@ export default function Home() {
           <div className="question-list">
             {fitQuestions.map((question) => (
               <div className="question-item" key={question}>
-                <span className="question-mark" aria-hidden="true">?</span>
+                <span className="question-mark" aria-hidden="true"><i>?</i></span>
                 <p>{question}</p>
               </div>
             ))}
@@ -166,10 +166,10 @@ export default function Home() {
           <div className="path-card" aria-hidden="true">
             <div className="path-icon"><Compass size={42} /></div>
             <div className="path-line" />
-            <div className="path-stop"><span>01</span><b>עוצרים</b></div>
-            <div className="path-stop"><span>02</span><b>מבינים</b></div>
-            <div className="path-stop"><span>03</span><b>בוחרים</b></div>
-            <div className="path-stop"><span>04</span><b>מתקדמים</b></div>
+            <div className="path-stop"><span><i>01</i></span><b>עוצרים</b></div>
+            <div className="path-stop"><span><i>02</i></span><b>מבינים</b></div>
+            <div className="path-stop"><span><i>03</i></span><b>בוחרים</b></div>
+            <div className="path-stop"><span><i>04</i></span><b>מתקדמים</b></div>
             <Route className="route-watermark" size={140} />
           </div>
         </div>

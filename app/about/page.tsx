@@ -6,7 +6,7 @@ import { PageHero } from "../components/PageHero";
 export const metadata: Metadata = {
   title: "אודות אביחי",
   description:
-    "הכירו את אביחי זרקור ואת הגישה שמחברת בין חשיבה רציונלית, הקשבה עמוקה ועבודה רגשית באימון אישי לגברים.",
+    "הכירו את אביחי צוררו ואת הגישה שמחברת בין חשיבה רציונלית, הקשבה עמוקה ועבודה רגשית באימון אישי לגברים.",
   alternates: { canonical: "/about" },
 };
 
@@ -30,7 +30,7 @@ export default function AboutPage() {
       <section className="section">
         <div className="container story-grid">
           <div className="story-main">
-            <p className="eyebrow">אביחי זרקור</p>
+            <p className="eyebrow">אביחי צוררו</p>
             <h2>אני לא מגיע עם תשובות מוכנות. אני מגיע עם נוכחות ושאלות טובות.</h2>
             <p>
               במשך שנים חיפשתי כלים שיעזרו לי להבין למה ידע והיגיון לבדם לא

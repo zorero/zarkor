@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | זרקור",
   },
   description:
-    "אימון אישי לגברים שרוצים לעצור, להתחבר לעצמם ולבחור את הדרך שלהם. עם אביחי זרקור, באשדוד או בזום.",
+    "אימון אישי לגברים שרוצים לעצור, להתחבר לעצמם ולבחור את הדרך שלהם. עם אביחי צוררו, באשדוד או בזום.",
   applicationName: "זרקור",
   openGraph: {
     type: "website",
@@ -42,7 +42,7 @@ const structuredData = {
     {
       "@type": "Person",
       "@id": "https://zarkorjourney.co.il/#avihai",
-      name: "אביחי זרקור",
+      name: "אביחי צוררו",
       jobTitle: "מאמן אישי לגברים",
       worksFor: { "@id": "https://zarkorjourney.co.il/#organization" },
       url: "https://zarkorjourney.co.il/about",

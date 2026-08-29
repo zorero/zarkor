@@ -5,7 +5,7 @@ import { WhatsAppForm } from "../components/WhatsAppForm";
 
 export const metadata: Metadata = {
   title: "יצירת קשר",
-  description: "קביעת שיחת התאמה ללא עלות עם אביחי זרקור. אפשר לפנות בטלפון, בוואטסאפ או במייל.",
+  description: "קביעת שיחת התאמה ללא עלות עם אביחי צוררו. אפשר לפנות בטלפון, בוואטסאפ או במייל.",
   alternates: { canonical: "/contact" },
 };
 
