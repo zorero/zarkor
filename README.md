@@ -1,5 +1,7 @@
 # זרקור Journey
 
+![React: Frontend](https://img.shields.io/badge/React-Frontend-149ECA) ![TypeScript: App](https://img.shields.io/badge/TypeScript-App-3178C6) ![Cloudflare: Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020) ![Language: Hebrew RTL](https://img.shields.io/badge/Language-Hebrew%20RTL-2563EB)
+
 האתר החדש של **זרקור: אימון אישי לגברים עם אביחי**.
 
 האתר בנוי בעברית ובכיוון RTL וכולל דף בית, אודות, אימון לגברים, תהליך,
