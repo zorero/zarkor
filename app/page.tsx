@@ -23,9 +23,9 @@ const sessionFacts = [
   { image: "icon10-1.svg", lines: <>התהליך כולל משימות<br/>כדי להעמיק ולהעצים את השינוי</> },
 ];
 const questions = [
-  "האם אתם נמצאים לקראת צומת קבלת החלטות חשובה בחייכם?",
-  "האם אתם מרגישים לא מסופקים בזוגיות, בעבודה או בהורות?",
-  "האם אתם מרגישים מתוסכלים מאיך שהחיים חולפים לידכם?",
+  "האם אתם נמצאים לקראת צומת קבלת החלטות חשובה בחייכם ?",
+  "האם אתם מרגישים לא מסופקים בזוגיות, בעבודה או בהורות ?",
+  "האם אתם מרגישים מתוסכלים מאיך שהחיים חולפים לידכם ?",
 ];
 const testimonials = [
   "אביחי בעיניי הוא מאמן מקצועי ביותר, ולא יכולתי למצוא טוב יותר. הוא יודע לגעת בנקודות הנכונות והמדויקות לפי כל אדם באשר הוא. אני מעריך את כל מה שהוא עשה בשבילי, ואני מתחיל דרך בגרסה חדשה של עצמי.",
@@ -88,7 +88,7 @@ export default function Home() {
 
       <section className="source-fit">
         <div className="container">
-          <h2 className="source-section-title">האם זה בכלל בשבילי?</h2>
+          <h2 className="source-section-title">האם זה בכלל בשבילי ?</h2>
           <div className="source-fit-grid">
             {questions.map((q,i)=><article key={q} data-elementor-motion="zoomIn"><img className="source-fit-symbol" src="/images/elementor/v.svg" width="52" height="52" alt="" /><p>{q}</p></article>)}
           </div>
