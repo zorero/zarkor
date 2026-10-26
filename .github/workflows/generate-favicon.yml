@@ -1,0 +1,43 @@
+name: Generate browser favicon
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/generate-favicon.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  favicon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Create standard multi-resolution favicon.ico from original brand image
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          source = Path("public/images/elementor/zarkor-logo-favi.png")
+          assert source.is_file(), f"Missing original favicon: {source}"
+          image = Image.open(source).convert("RGBA")
+          image.thumbnail((256, 256), Image.Resampling.LANCZOS)
+          canvas = Image.new("RGBA", (256, 256), (0,0,0,0))
+          canvas.alpha_composite(image, ((256-image.width)//2, (256-image.height)//2))
+          canvas.save("public/favicon.ico", format="ICO", sizes=[(16,16),(32,32),(48,48),(64,64),(128,128),(256,256)])
+          assert Path("public/favicon.ico").stat().st_size > 100
+          print("Generated public/favicon.ico from original logo")
+          PY
+      - name: Commit icon to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/favicon.ico
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: add original Zarkor favicon.ico for browsers"
+            git push
+          fi
