@@ -7,7 +7,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Image src="/images/elementor/zarkor-logo-1.svg" alt="זרקור" width={92} height={92} />
+          <Image src="/images/elementor/zarkor-logo-footer-white.svg" alt="זרקור" width={92} height={92} />
           <div>
             <h2>אין בעיות לפתור,<br />רק אמת לגלות.</h2>
             <p>אימון אישי לגברים עם אביחי, באשדוד או בזום.</p>
