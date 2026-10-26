@@ -61,7 +61,7 @@ export default function CoachingPage() {
       <section className="section section-dark">
         <div className="container two-column-copy">
           <div>
-            <p className="eyebrow">למה דווקא אימון לגברים?</p>
+            <p className="eyebrow">למה דווקא אימון לגברים ?</p>
             <h2>כי הרבה גברים למדו לתפקד לפני שלמדו להרגיש.</h2>
           </div>
           <div className="rich-copy">
