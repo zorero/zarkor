@@ -54,7 +54,7 @@ const testimonials = [
 export default function Home() {
   return (
     <main className="home-page">
-      <section className="hero-section">
+      <section className="hero-section" id="top">
         <div className="spotlight-beam" aria-hidden="true" />
         <div className="container hero-grid">
           <div className="hero-copy reveal">
@@ -87,6 +87,7 @@ export default function Home() {
           </div>
 
           <div className="hero-visual" aria-label="זרקור שמאיר דרך חדשה">
+            <span className="hero-visual-index" aria-hidden="true">01 / SEE CLEARLY</span>
             <Image
               src="/images/zarkor-logo.svg"
               alt="זרקור, אימון אישי לגברים"
@@ -96,18 +97,20 @@ export default function Home() {
               className="hero-logo"
             />
             <p className="signature-line">אין בעיות לפתור, רק אמת לגלות.</p>
+            <span className="hero-visual-caption" aria-hidden="true">זרקור / אימון אישי</span>
           </div>
         </div>
       </section>
 
-      <section className="section section-soft">
-        <div className="container narrow">
-          <p className="eyebrow">רגע של כנות</p>
-          <h2>האם זה בכלל בשבילך?</h2>
-          <div className="question-list">
-            {fitQuestions.map((question) => (
+      <section className="section section-soft editorial-questions">
+        <div className="container editorial-questions-grid">
+          <div className="editorial-questions-intro"><p className="eyebrow">01 / רגע של כנות</p>
+          <h2>האם זה בכלל <em>בשבילך?</em></h2>
+          <p className="questions-aside">לפעמים הסימן הראשון הוא רק ההרגשה שמשהו כבר לא מתאים.</p></div>
+          <div className="editorial-questions-content"><div className="question-list">
+            {fitQuestions.map((question, index) => (
               <div className="question-item" key={question}>
-                <span className="question-mark" aria-hidden="true"><i>?</i></span>
+                <span className="question-mark" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
                 <p>{question}</p>
               </div>
             ))}
@@ -115,15 +118,15 @@ export default function Home() {
           <p className="section-closing">
             אם אחת השאלות פגעה במקום מוכר, לא חייבים כבר לדעת מה הפתרון.
             מספיק להיות מוכן להסתכל.
-          </p>
+          </p></div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section editorial-approach">
         <div className="container">
           <div className="section-heading split-heading">
             <div>
-              <p className="eyebrow">הגישה שלי</p>
+              <p className="eyebrow">02 / הגישה שלי</p>
               <h2>אימון שלא מבקש ממך להיות מישהו אחר</h2>
             </div>
             <p>
@@ -143,10 +146,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section process-preview">
+      <section className="section process-preview editorial-process">
         <div className="container process-grid">
           <div className="process-copy">
-            <p className="eyebrow">המסע שלך</p>
+            <p className="eyebrow">03 / המסע שלך</p>
             <h2>לא קיצור דרך. דרך שמתאימה לך.</h2>
             <p>
               בתהליך נוציא מתיק הגב את מה שמכביד: תפיסות ישנות, פחדים
@@ -175,10 +178,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section editorial-voices">
         <div className="container">
           <div className="section-heading centered">
-            <p className="eyebrow">מילים של מתאמנים</p>
+            <p className="eyebrow">04 / מילים של מתאמנים</p>
             <h2>השינוי שלהם, במילים שלהם</h2>
           </div>
           <div className="testimonial-grid">
