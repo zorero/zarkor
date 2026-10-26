@@ -23,7 +23,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div>
-          <h3>מדברים?</h3>
+          <h3>מדברים ?</h3>
           <div className="footer-links contact-links">
             <a href="tel:+972528260661"><Phone size={17} /> 052-8260661</a>
             <a href="mailto:zorero@gmail.com"><Mail size={17} /> zorero@gmail.com</a>
