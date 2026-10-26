@@ -30,8 +30,8 @@ export function SiteFooter() {
             <span><MapPin size={17} /> אשדוד</span>
           </div>
           <div className="social-links">
-            <a href="https://www.facebook.com/zarkor.life.coaching" target="_blank" rel="noreferrer" aria-label="פייסבוק"><span aria-hidden="true">f</span></a>
-            <a href="https://www.instagram.com/zarkor_life_coaching/" target="_blank" rel="noreferrer" aria-label="אינסטגרם"><span aria-hidden="true">◎</span></a>
+            <a href="https://www.facebook.com/zarkor.life.coaching" target="_blank" rel="noreferrer" aria-label="פייסבוק"><Image src="/images/elementor/icon4.svg" alt="" width={45} height={45} aria-hidden="true" /></a>
+            <a href="https://www.instagram.com/zarkor_life_coaching/" target="_blank" rel="noreferrer" aria-label="אינסטגרם"><Image src="/images/elementor/icon5.svg" alt="" width={45} height={45} aria-hidden="true" /></a>
           </div>
         </div>
       </div>
