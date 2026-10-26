@@ -1,202 +1,104 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowLeft,
-  Brain,
-  Check,
-  Compass,
-  HeartHandshake,
-  Lightbulb,
-  MapPin,
-  MessageCircle,
-  Route,
-} from "lucide-react";
-import { CallToAction } from "./components/CallToAction";
+import { Clock3, MapPin, NotebookPen, Lightbulb, ArrowLeft } from "lucide-react";
+import { WhatsAppForm } from "./components/WhatsAppForm";
 
 export const metadata: Metadata = {
-  title: "אימון אישי לגברים באשדוד",
-  description:
-    "אימון אישי לגברים שרוצים להבין מה באמת עוצר אותם, לקבל החלטות וליצור שינוי שמחזיק. עם אביחי צוררו, בקליניקה באשדוד או בזום.",
+  title: "זרקור | אימון אישי עם אביחי",
+  description: "זרקור: אימון אישי עם אביחי צוררו. המסע שלי החל בתור לקוח, והיום אני כאן לעזור לך להתחיל את שלך.",
   alternates: { canonical: "/" },
 };
 
-const fitQuestions = [
-  "אתה עומד בפני החלטה חשובה ולא מצליח לבחור כיוון?",
-  "משהו בזוגיות, בעבודה או בהורות מרגיש תקוע?",
-  "מבחוץ הכול נראה בסדר, אבל בפנים אתה מרגיש שהחיים חולפים לידך?",
+const qualities = [
+  { title: "מקצועיות", text: "כלים מתקדמים שיעזרו לך לצמוח ולהתפתח." },
+  { title: "יחס אישי", text: "הקשבה עמוקה והבנה של הצרכים הייחודיים שלך." },
+  { title: "אינטואיציה", text: "היכולת לחדור לעומק ולקלוט את מה שאתה באמת צריך." },
+  { title: "אינטליגנציה רגשית", text: "תמיכה רגשית וחיבור עמוק שיעזרו לך להתמודד עם אתגרים." },
 ];
-
-const strengths = [
-  {
-    icon: Brain,
-    title: "שכל ורגש באותו חדר",
-    text: "לא צריך לבחור בין ניתוח הגיוני לבין חיבור רגשי. באימון אנחנו משתמשים בשניהם.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "מרחב בטוח וישיר",
-    text: "אפשר לדבר בלי פוזה, בלי שיפוט ובלי להציג גרסה מסודרת יותר של מה שבאמת קורה.",
-  },
-  {
-    icon: Lightbulb,
-    title: "שאלות שמאירות אפשרויות",
-    text: "אני לא בוחר את הדרך במקומך. אני עוזר לך לראות שבילים שהתרגלת לפספס.",
-  },
+const sessionFacts = [
+  { Icon: NotebookPen, lines: <>תהליך האימון<br/>מורכב מ-12 מפגשים</> },
+  { Icon: MapPin, lines: <>המפגשים מתקיימים<br/>בקליניקה באשדוד או בזום</> },
+  { Icon: Clock3, lines: <>אורך המפגש<br/>כשעה</> },
+  { Icon: Lightbulb, lines: <>התהליך כולל משימות<br/>כדי להעמיק ולהעצים את השינוי</> },
 ];
-
+const questions = [
+  "האם אתם נמצאים לקראת צומת קבלת החלטות חשובה בחייכם?",
+  "האם אתם מרגישים לא מסופקים בזוגיות, בעבודה או בהורות?",
+  "האם אתם מרגישים מתוסכלים מאיך שהחיים חולפים לידכם?",
+];
 const testimonials = [
-  "אני אדם סגור והוא הצליח להגיע אליי בטבעיות ובזרימה הנכונה. הוא ידע היכן להתעקש והיכן לשחרר.",
-  "כל מפגש היה משמעותי ובעל ערך. היום אני מרגיש בטוח יותר, מכוון יותר ובעיקר פתוח לשינויים ולצמיחה.",
-  "התמיכה, הדיוק והמקצועיות היו משמעותיים מאוד. הידיעה שיש לי לאן לפנות נותנת לי הרבה ביטחון.",
+  "אביחי בעיניי הוא מאמן מקצועי ביותר, ולא יכולתי למצוא טוב יותר. הוא יודע לגעת בנקודות הנכונות והמדויקות לפי כל אדם באשר הוא. אני מעריך את כל מה שהוא עשה בשבילי, ואני מתחיל דרך בגרסה חדשה של עצמי.",
+  "עברתי תהליך מעולה עם אביחי, אני אדם סגור והוא הצליח להגיע אלי בטבעיות ובזרימה הנכונה, הוא ידע היכן להתעקש והיכן לשחרר. היו לי בעיות במערכות יחסים עם הילדים והמשפחה, נושאים עמוקים שרציתי לדון בהם לעומק והוא היה מדויק למטרה.",
+  "אביחי הוא הרבה יותר ממאמן. הוא מלווה אמיתי שמבין לעומק את הצרכים של האדם מולו. כל מפגש איתו היה משמעותי ובעל ערך, והוא הצליח לכוון אותי בדיוק לנקודות שדורשות שינוי והתמקדות.",
 ];
+
+function ContactStrip({ id }: { id: string }) {
+  return (
+    <section className="source-contact" id={id}>
+      <div className="container">
+        <h2>לקביעת שיחת התאמה ללא עלות ולפרטים נוספים</h2>
+        <WhatsAppForm />
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   return (
-    <main className="home-page">
-      <section className="hero-section" id="top">
-        <div className="spotlight-beam" aria-hidden="true" />
-        <div className="container hero-grid">
-          <div className="hero-copy reveal">
-            <p className="eyebrow">אימון אישי לגברים · אשדוד ובזום</p>
-            <h1>
-              לא צריך לקרוס
-              <span>כדי להתחיל להשתנות.</span>
-            </h1>
-            <p className="hero-lead">
-              מקום לעצור, להבין מה באמת קורה מתחת לפני השטח, ולבחור את
-              הצעד הבא שלך בלי קלישאות ובלי פוזה.
-            </p>
-            <div className="hero-actions">
-              <Link className="button button-primary" href="/contact">
-                לקביעת שיחת התאמה
-                <ArrowLeft size={18} aria-hidden="true" />
-              </Link>
-              <Link className="button button-ghost" href="/process">
-                איך נראה התהליך?
-              </Link>
-            </div>
-            <div className="hero-meta" aria-label="פרטי השירות">
-              <span>
-                <MapPin size={17} aria-hidden="true" /> קליניקה באשדוד
-              </span>
-              <span>
-                <MessageCircle size={17} aria-hidden="true" /> אפשר גם בזום
-              </span>
-            </div>
-          </div>
-
-          <div className="hero-visual" aria-label="זרקור שמאיר דרך חדשה">
-            <span className="hero-visual-index" aria-hidden="true">01 / SEE CLEARLY</span>
-            <Image
-              src="/images/zarkor-logo.svg"
-              alt="זרקור, אימון אישי לגברים"
-              width={360}
-              height={360}
-              priority
-              className="hero-logo"
-            />
-            <p className="signature-line">אין בעיות לפתור, רק אמת לגלות.</p>
-            <span className="hero-visual-caption" aria-hidden="true">זרקור / אימון אישי</span>
-          </div>
+    <main className="source-site">
+      <section className="source-hero">
+        <div className="container source-hero-content">
+          <h1>המסע שלי החל בתור לקוח.<br/><strong>היום, אני כאן כדי לעזור לך להתחיל את שלך.</strong></h1>
+          <p>חוויתי על בשרי את הכוח של אימון אישי. אחרי שנים של חיפוש, מצאתי את הכלים והתמיכה ששינו את חיי מקצה לקצה. היום, אני כאן כדי להעביר את זה הלאה ולעזור לך להשיג את מה שחשוב לך.</p>
+          <Link className="source-primary-link" href="#contact-first">לשיחת התאמה ללא עלות <ArrowLeft size={20}/></Link>
         </div>
       </section>
 
-      <section className="section section-soft editorial-questions">
-        <div className="container editorial-questions-grid">
-          <div className="editorial-questions-intro"><p className="eyebrow">01 / רגע של כנות</p>
-          <h2>האם זה בכלל <em>בשבילך?</em></h2>
-          <p className="questions-aside">לפעמים הסימן הראשון הוא רק ההרגשה שמשהו כבר לא מתאים.</p></div>
-          <div className="editorial-questions-content"><div className="question-list">
-            {fitQuestions.map((question, index) => (
-              <div className="question-item" key={question}>
-                <span className="question-mark" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-                <p>{question}</p>
-              </div>
-            ))}
-          </div>
-          <p className="section-closing">
-            אם אחת השאלות פגעה במקום מוכר, לא חייבים כבר לדעת מה הפתרון.
-            מספיק להיות מוכן להסתכל.
-          </p></div>
-        </div>
-      </section>
-
-      <section className="section editorial-approach">
+      <section className="source-qualities">
         <div className="container">
-          <div className="section-heading split-heading">
-            <div>
-              <p className="eyebrow">02 / הגישה שלי</p>
-              <h2>אימון שלא מבקש ממך להיות מישהו אחר</h2>
-            </div>
-            <p>
-              המטרה היא לא לתקן אותך. המטרה היא לזהות את הדפוסים, החסמים
-              והאמיתות שמנהלים אותך, ואז לבחור איך אתה רוצה לפעול.
-            </p>
+          <h2>עם ניסיון של 7 שנים בליווי אנשים בתהליכי טרנספורמציה, אני מביא איתי:</h2>
+          <div className="source-qualities-grid">
+            {qualities.map(item => <article key={item.title}><h3>{item.title}</h3><p>{item.text}</p></article>)}
           </div>
-          <div className="feature-grid">
-            {strengths.map(({ icon: Icon, title, text }) => (
-              <article className="feature-card" key={title}>
-                <span className="icon-shell"><Icon size={25} aria-hidden="true" /></span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
+          <p className="source-qualities-closing">אני מאמין שכל אחד יכול להשיג את המטרות שלו. אם אתה מוכן להשקיע בעצמך ולעשות שינוי משמעותי בחיים, אני כאן כדי ללוות אותך בכל צעד ושלב.</p>
         </div>
       </section>
 
-      <section className="section process-preview editorial-process">
-        <div className="container process-grid">
-          <div className="process-copy">
-            <p className="eyebrow">03 / המסע שלך</p>
-            <h2>לא קיצור דרך. דרך שמתאימה לך.</h2>
-            <p>
-              בתהליך נוציא מתיק הגב את מה שמכביד: תפיסות ישנות, פחדים
-              והרגלים שכבר לא משרתים אותך. כשנגיע לצומת, אתה תבחר לאן לפנות.
-              התפקיד שלי הוא להאיר גם את הדרך שלא ראית.
-            </p>
-            <ul className="check-list">
-              <li><Check size={18} /> תהליך ממוקד של 12 מפגשים</li>
-              <li><Check size={18} /> מפגש אישי של כשעה</li>
-              <li><Check size={18} /> משימות בין המפגשים להעמקת השינוי</li>
-              <li><Check size={18} /> בקליניקה באשדוד או בזום</li>
-            </ul>
-            <Link className="text-link" href="/process">
-              להכיר את שלבי התהליך <ArrowLeft size={17} />
-            </Link>
-          </div>
-          <div className="path-card" aria-hidden="true">
-            <div className="path-icon"><Compass size={42} /></div>
-            <div className="path-line" />
-            <div className="path-stop"><span><i>01</i></span><b>עוצרים</b></div>
-            <div className="path-stop"><span><i>02</i></span><b>מבינים</b></div>
-            <div className="path-stop"><span><i>03</i></span><b>בוחרים</b></div>
-            <div className="path-stop"><span><i>04</i></span><b>מתקדמים</b></div>
-            <Route className="route-watermark" size={140} />
-          </div>
-        </div>
+      <section className="source-image-band">
+        <div className="container"><h2>בוא נבנה ביחד את העתיד שאתה חולם עליו.</h2><p>בעזרת כלים מתקדמים שיעזרו לך לצמוח ולהתפתח.</p></div>
       </section>
+      <ContactStrip id="contact-first"/>
 
-      <section className="section editorial-voices">
+      <section className="source-process" id="process">
         <div className="container">
-          <div className="section-heading centered">
-            <p className="eyebrow">04 / מילים של מתאמנים</p>
-            <h2>השינוי שלהם, במילים שלהם</h2>
+          <h2 className="source-section-title">על התהליך</h2>
+          <p className="source-process-intro">בתהליך האימון נצא למסע לגילוי עצמי. נלמד להוציא מתיק הגב את הדברים המכבידים, כמו פרדיגמות וחסמים שמעכבים אותנו. במהלך המסע נגיע לצמתים שבהם הבחירה תהיה שלך, והתפקיד שלי יהיה לשאול את השאלות הנכונות כדי להאיר בעזרת זרקור את הדרך.</p>
+          <div className="source-facts">
+            {sessionFacts.map(({ Icon,lines },index)=><div key={index} className="source-fact"><span className="source-icon"><Icon size={27}/></span><p>{lines}</p></div>)}
           </div>
-          <div className="testimonial-grid">
-            {testimonials.map((quote) => (
-              <blockquote key={quote}>
-                <span className="quote-mark" aria-hidden="true">״</span>
-                <p>{quote}</p>
-                <footer>מתוך משוב אנונימי של מתאמן</footer>
-              </blockquote>
-            ))}
-          </div>
+          <div className="source-slogan"><h3>אין בעיות לפתור רק אמת לגלות</h3></div>
         </div>
       </section>
 
-      <CallToAction />
+      <section className="source-fit">
+        <div className="container">
+          <h2 className="source-section-title">האם זה בכלל בשבילי?</h2>
+          <div className="source-fit-grid">
+            {questions.map((q,i)=><article key={q}><span className="source-fit-symbol">{String(i+1).padStart(2,"0")}</span><p>{q}</p></article>)}
+          </div>
+          <p className="source-fit-conclusion">אם עניתם כן על אחת (או יותר) מהשאלות, זה הרגע ליצור קשר ולקבוע פגישת התאמה ללא עלות.</p>
+        </div>
+      </section>
+      <ContactStrip id="contact-second"/>
+
+      <section className="source-testimonials">
+        <div className="container">
+          <h2 className="source-section-title">מתאמנים ממליצים</h2>
+          <div className="source-testimonial-grid">
+            {testimonials.map((t,i)=><blockquote key={i}><span aria-hidden="true">״</span><p>{t}</p><footer>מתוך משוב מתאמן</footer></blockquote>)}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
