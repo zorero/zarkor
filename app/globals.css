@@ -1021,3 +1021,22 @@ body { font-family: "Heebo","Open Sans Hebrew Condensed",Arial,sans-serif; }
  .home-page .editorial-approach .feature-card::before { margin-bottom: 20px; }
  .home-page .editorial-process .path-card { box-shadow: 12px 12px 0 #fff100; }
 }
+
+
+/* Shared visual system for secondary pages */
+.page-hero { background: linear-gradient(125deg,#eff8f7,#d6f0f2); position:relative; overflow:hidden; }
+.page-hero::before { content:""; position:absolute; width: min(36vw,460px); aspect-ratio:1; left:-110px; top:-190px; background:#00b7ce; opacity:.13; transform:rotate(32deg); pointer-events:none; }
+.page-hero h1 { font-family:"Frank Ruhl Libre",serif; font-weight:700; line-height:1.13; letter-spacing:-.04em; color:#172d34; }
+.page-hero .eyebrow { color:#007f95; font-family:"Heebo",sans-serif; font-size:.9rem; font-weight:700; }
+.page-hero-copy { font-family:"Heebo",sans-serif; line-height:1.8; color:#304d55; }
+.page-hero-beam { opacity:.09; }
+.section-heading h2:not(.home-page h2), .timeline-step h2, .contact-card h2, .form-heading h2 { font-family:"Frank Ruhl Libre",serif; font-weight:700; letter-spacing:-.025em; }
+.rich-copy, .large-copy, .story-main, .practical-list { font-family:"Heebo",sans-serif; }
+.topic-card, .area-card, .value-card { border-radius:2px; }
+.topic-card h2, .area-card h2, .value-card h2 { font-family:"Secular One","Heebo",sans-serif; font-weight:400; }
+.button, .text-link, .faq-list summary { font-family:"Heebo",sans-serif; }
+.cta-section { background:#007e92; }
+.cta-inner h2 { font-family:"Frank Ruhl Libre",serif; font-weight:700; }
+.cta-inner .button-light { background:#fff100; border-radius:2px; color:#172d34; }
+.site-footer { background:#172d34; font-family:"Heebo",sans-serif; }
+@media (prefers-reduced-motion: reduce) { .button, .feature-card, .desktop-nav a::after { transition:none; } }
