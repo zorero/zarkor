@@ -1112,3 +1112,46 @@ body { color:#243e45; background:#f7f7f3; }
   .home-page .hero-section::after { display:none; }
   .home-page .editorial-questions-grid { grid-template-columns:1fr; }
 }
+
+
+/* Interior composition: shared grid, hierarchy and rhythm */
+main:not(.home-page) .section { padding-block:clamp(70px,8vw,115px); }
+main:not(.home-page) .page-hero { background:#e8f3f1; border-bottom:6px solid #fff100; }
+main:not(.home-page) .page-hero h1 { max-width:940px; font-size:clamp(2.9rem,5.8vw,5.4rem); }
+main:not(.home-page) .page-hero-copy { max-width:780px; font-size:clamp(1.1rem,1.6vw,1.4rem); }
+main:not(.home-page) h2 { line-height:1.24; }
+main:not(.home-page) .section-heading:not(.centered) { position:relative; padding-bottom:35px; border-bottom:1px solid #9abcc1; margin-bottom:50px; }
+main:not(.home-page) .section-heading:not(.centered)::after { content:""; position:absolute; bottom:-3px; right:0; height:5px; width:95px; background:#fff100; }
+main:not(.home-page) .section-heading.centered { background:none; padding:0 0 28px; min-height:0; }
+main:not(.home-page) .section-heading.centered::after { content:""; display:block; width:70px; height:5px; background:#00b7ce; margin:24px auto 0; }
+main:not(.home-page) .eyebrow { font-family:"Heebo",sans-serif; color:#007c90; font-weight:800; letter-spacing:0; font-size:.88rem; }
+main:not(.home-page) .story-grid, main:not(.home-page) .two-column-copy, main:not(.home-page) .contact-grid { gap:clamp(35px,5vw,90px); }
+main:not(.home-page) .story-main h2 { color:#172d34; font-family:"Frank Ruhl Libre",serif; font-size:clamp(2.2rem,3.5vw,3.6rem); }
+main:not(.home-page) .story-main > p:not(.eyebrow) { font-size:1.12rem; line-height:1.95; }
+main:not(.home-page) .quote-panel { background:#173b44; border-radius:0; border-top:8px solid #fff100; padding:clamp(32px,4vw,65px); }
+main:not(.home-page) .quote-panel blockquote { font-family:"Frank Ruhl Libre",serif; font-size:clamp(1.6rem,2.3vw,2.3rem); line-height:1.55; color:#fff; }
+main:not(.home-page) .values-grid, main:not(.home-page) .area-grid, main:not(.home-page) .topic-grid { gap:14px; }
+main:not(.home-page) .value-card,main:not(.home-page) .area-card,main:not(.home-page) .topic-card { padding:clamp(25px,3vw,45px); min-height:260px; border-top:6px solid #00b7ce; }
+main:not(.home-page) .value-card:nth-child(even),main:not(.home-page) .area-card:nth-child(even),main:not(.home-page) .topic-card:nth-child(even) { border-top-color:#d6bb00; }
+main:not(.home-page) .value-card h3,main:not(.home-page) .area-card h3 { font-family:"Secular One","Heebo",sans-serif; color:#173b44; font-weight:400; font-size:1.5rem; }
+main:not(.home-page) .timeline { max-width:950px; }
+main:not(.home-page) .timeline::before { background:#00b7ce; opacity:.4; }
+main:not(.home-page) .timeline-step { padding-block:20px; }
+main:not(.home-page) .step-number { background:#fff100; color:#173b44; border:5px solid #f7f7f3; transform:none; border-radius:0; font-family:"Heebo",sans-serif; }
+main:not(.home-page) .timeline-step h2 { color:#173b44; }
+main:not(.home-page) .practical-list li { background:#fff; border-right:4px solid #00b7ce; border-radius:0; }
+main:not(.home-page) .faq-list { max-width:980px; }
+main:not(.home-page) .faq-list details { border:0; border-bottom:1px solid #b2cbd0; border-radius:0; background:transparent; }
+main:not(.home-page) .faq-list details:first-child { border-top:1px solid #b2cbd0; }
+main:not(.home-page) .faq-list summary { font-size:1.18rem; font-weight:700; color:#173b44; }
+main:not(.home-page) .faq-list details[open] { background:#e7f3f3; }
+main:not(.home-page) .contact-card { border-radius:0; background:#173b44; border-top:7px solid #fff100; }
+main:not(.home-page) .contact-card h2,main:not(.home-page) .contact-card .eyebrow { color:#fff; }
+main:not(.home-page) .contact-form { border-radius:0; background:#e5f1f0; border-top:7px solid #00b7ce; }
+main:not(.home-page) .contact-form h2 { color:#173b44; }
+@media(max-width:780px) {
+ main:not(.home-page) .section { padding-block:65px; }
+ main:not(.home-page) .page-hero h1 { font-size:clamp(2.6rem,9vw,4.4rem); }
+ main:not(.home-page) .section-heading:not(.centered) { padding-bottom:26px; margin-bottom:30px; }
+ main:not(.home-page) .value-card,main:not(.home-page) .area-card,main:not(.home-page) .topic-card { min-height:0; }
+}
