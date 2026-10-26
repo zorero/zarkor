@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     siteName: "זרקור, אימון אישי לגברים",
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/images/elementor/zarkor-logo-favi.png",
+    shortcut: "/images/elementor/zarkor-logo-favi.png",
   },
 };
 
