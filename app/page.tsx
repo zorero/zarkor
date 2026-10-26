@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { WhatsAppForm } from "./components/WhatsAppForm";
+import { ElementorMotion } from "./components/ElementorMotion";
 
 export const metadata: Metadata = {
   title: "זרקור | אימון אישי עם אביחי",
@@ -45,41 +46,42 @@ function ContactStrip({ id }: { id: string }) {
 export default function Home() {
   return (
     <main className="source-site">
+      <ElementorMotion />
       <section className="source-hero">
         <div className="source-hero-quick-contact" aria-label="דרכי יצירת קשר מהירות">
           <a href="https://wa.me/972528260661" target="_blank" rel="noopener noreferrer" aria-label="שליחת הודעה בוואטסאפ"><Image src="/images/elementor/icon2.svg" width={60} height={60} alt="" aria-hidden="true" /></a>
           <a href="tel:+972528260661" aria-label="התקשרו אליי"><Image src="/images/elementor/icon1.svg" width={60} height={60} alt="" aria-hidden="true" /></a>
         </div>
         <div className="container source-hero-content">
-          <div className="source-hero-brand"><Image src="/images/elementor/zarkor-logo-1.svg" width={340} height={230} alt="זרקור: מאמן לגברים, שנשים אוהבות" priority /></div>
-          <h1>המסע שלי החל בתור לקוח. היום, אני כאן כדי לעזור לך להתחיל את שלך.</h1>
+          <div className="source-hero-brand" data-elementor-motion="fadeInUp" data-motion-delay="600"><Image src="/images/elementor/zarkor-logo-1.svg" width={340} height={230} alt="זרקור: מאמן לגברים, שנשים אוהבות" priority /></div>
+          <h1 data-elementor-motion="fadeIn" data-motion-delay="800">המסע שלי החל בתור לקוח. היום, אני כאן כדי לעזור לך להתחיל את שלך.</h1>
           <p>חוויתי על בשרי את הכוח של אימון אישי. אחרי שנים של חיפוש, מצאתי את הכלים והתמיכה ששינו את חיי מקצה לקצה. היום, אני כאן כדי להעביר את זה הלאה ולעזור לך להשיג את מה שחשוב לך.</p>
         </div>
       </section>
 
       <section className="source-qualities">
         <div className="container">
-          <h2>עם ניסיון של 7 שנים בליווי אנשים בתהליכי טרנספורמציה, אני מביא איתי:</h2>
+          <h2 data-elementor-motion="fadeIn" data-motion-delay="600">עם ניסיון של 7 שנים בליווי אנשים בתהליכי טרנספורמציה, אני מביא איתי:</h2>
           <div className="source-qualities-grid">
-            {qualities.map(item => <article key={item.title}><h3>{item.title}</h3><p>{item.text}</p></article>)}
+            {qualities.map(item => <article key={item.title}><h3 data-elementor-motion="fadeIn" data-motion-delay="400">{item.title}</h3><p data-elementor-motion="fadeIn" data-motion-delay="600">{item.text}</p></article>)}
           </div>
-          <p className="source-qualities-closing">אני מאמין שכל אחד יכול להשיג את המטרות שלו. אם אתה מוכן להשקיע בעצמך ולעשות שינוי משמעותי בחיים, אני כאן כדי ללוות אותך בכל צעד ושלב.</p>
+          <p className="source-qualities-closing" data-elementor-motion="fadeIn" data-motion-delay="600">אני מאמין שכל אחד יכול להשיג את המטרות שלו. אם אתה מוכן להשקיע בעצמך ולעשות שינוי משמעותי בחיים, אני כאן כדי ללוות אותך בכל צעד ושלב.</p>
         </div>
       </section>
 
       <section className="source-image-band">
-        <div className="container"><h2>בוא נבנה ביחד את העתיד שאתה חולם עליו.</h2><p>בעזרת כלים מתקדמים שיעזרו לך לצמוח ולהתפתח.</p></div>
+        <div className="container" data-elementor-motion="fadeInUp" data-motion-delay="600"><h2>בוא נבנה ביחד את העתיד שאתה חולם עליו.</h2><p>בעזרת כלים מתקדמים שיעזרו לך לצמוח ולהתפתח.</p></div>
       </section>
       <ContactStrip id="contact-first"/>
 
       <section className="source-process" id="process">
         <div className="container">
-          <h2 className="source-section-title">על התהליך</h2>
+          <h2 className="source-section-title" data-elementor-motion="fadeIn" data-motion-delay="600">על התהליך</h2>
           <p className="source-process-intro">בתהליך האימון נצא למסע לגילוי עצמי. נלמד להוציא מתיק הגב את הדברים המכבידים, כמו פרדיגמות וחסמים שמעכבים אותנו. במהלך המסע נגיע לצמתים שבהם הבחירה תהיה שלך, והתפקיד שלי יהיה לשאול את השאלות הנכונות כדי להאיר בעזרת זרקור את הדרך.</p>
           <div className="source-facts">
-            {sessionFacts.map(({ image,lines },index)=><div key={index} className="source-fact"><span className="source-icon"><img src={`/images/elementor/${image}`} width="62" height="62" alt="" /></span><p>{lines}</p></div>)}
+            {sessionFacts.map(({ image,lines },index)=><div key={index} className="source-fact" data-elementor-motion="zoomIn"><span className="source-icon"><img src={`/images/elementor/${image}`} width="62" height="62" alt="" /></span><p>{lines}</p></div>)}
           </div>
-          <div className="source-slogan"><h3>אין בעיות לפתור רק אמת לגלות</h3></div>
+          <div className="source-slogan" data-elementor-motion="fadeIn" data-motion-delay="600"><h3>אין בעיות לפתור רק אמת לגלות</h3></div>
         </div>
       </section>
 
@@ -87,7 +89,7 @@ export default function Home() {
         <div className="container">
           <h2 className="source-section-title">האם זה בכלל בשבילי?</h2>
           <div className="source-fit-grid">
-            {questions.map((q,i)=><article key={q}><img className="source-fit-symbol" src="/images/elementor/v.svg" width="52" height="52" alt="" /><p>{q}</p></article>)}
+            {questions.map((q,i)=><article key={q} data-elementor-motion="zoomIn"><img className="source-fit-symbol" src="/images/elementor/v.svg" width="52" height="52" alt="" /><p>{q}</p></article>)}
           </div>
           <p className="source-fit-conclusion">אם עניתם כן על אחת (או יותר) מהשאלות, זה הרגע ליצור קשר ולקבוע פגישת התאמה ללא עלות.</p>
         </div>
@@ -96,7 +98,7 @@ export default function Home() {
 
       <section className="source-testimonials">
         <div className="container">
-          <h2 className="source-section-title">מתאמנים ממליצים</h2>
+          <h2 className="source-section-title" data-elementor-motion="fadeIn" data-motion-delay="600">מתאמנים ממליצים</h2>
           <div className="source-testimonial-grid">
             {testimonials.map((t,i)=><blockquote key={i}><span aria-hidden="true">״</span><p>{t}</p><footer>מתוך משוב מתאמן</footer></blockquote>)}
           </div>
