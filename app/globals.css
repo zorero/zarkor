@@ -1039,3 +1039,74 @@ main:not(.source-site) .articles-note { background:#fff100; padding:30px; }
 @media (prefers-reduced-motion: reduce) {
  .source-site [data-elementor-motion] { opacity:1!important; animation:none!important; transform:none!important; }
 }
+
+
+/* Elementor fidelity: "האם זה בכלל בשבילי?" original three-column section */
+.source-site .source-fit {
+  background:#7bd5df;
+  color:#404041;
+  padding:clamp(65px,6vw,100px) 0 clamp(42px,5vw,70px);
+  text-align:center;
+}
+.source-site .source-fit .source-section-title {
+  background:none;
+  color:#404041;
+  font-family:"Open Sans Hebrew Condensed",Arial,sans-serif;
+  font-size:clamp(3.1rem,5.3vw,5.8rem);
+  font-weight:400;
+  margin:0 auto clamp(48px,5vw,80px);
+  padding:0;
+}
+.source-site .source-fit .source-section-title::after {
+  content:"";
+  display:block;
+  width:min(525px,65%);
+  height:3px;
+  background:#fff;
+  margin:20px auto 0;
+}
+.source-site .source-fit-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(28px,5vw,80px);
+  align-items:start;
+  margin:0 auto;
+}
+.source-site .source-fit-grid article {
+  background:transparent;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  padding:0 10px;
+}
+.source-site .source-fit-symbol {
+  width:62px; height:62px;
+  margin:0 auto 8px;
+  object-fit:contain;
+  filter:invert(81%) sepia(95%) saturate(1273%) hue-rotate(358deg) brightness(107%) contrast(103%);
+}
+.source-site .source-fit-grid p {
+  color:#404041;
+  font-size:clamp(1.6rem,2.4vw,2.45rem);
+  font-weight:400;
+  line-height:1.37;
+  margin:0;
+}
+.source-site .source-fit-conclusion {
+  max-width:1300px;
+  margin:clamp(45px,5vw,75px) auto 0;
+  color:#404041;
+  font-size:clamp(1.5rem,2.3vw,2.3rem);
+  line-height:1.5;
+}
+@media(max-width:850px){
+ .source-site .source-fit-grid {gap:22px;}
+ .source-site .source-fit-grid p {font-size:clamp(1.3rem,2.6vw,1.75rem);}
+}
+@media(max-width:600px){
+ .source-site .source-fit-grid {grid-template-columns:1fr;gap:44px;}
+ .source-site .source-fit-grid article {padding:0 20px;}
+ .source-site .source-fit .source-section-title {font-size:clamp(2.8rem,9vw,4rem);}
+ .source-site .source-fit-grid p {font-size:1.65rem;}
+ .source-site .source-fit-symbol {width:52px;height:52px;}
+}
