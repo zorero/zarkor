@@ -36,9 +36,9 @@ jobs:
                       if name.endswith(".svg"):
                           valid=b"<svg" in data[:5000] or b"<svg" in data
                       elif name.endswith(".png"):
-                          valid=data.startswith(b"\\x89PNG\\r\\n\\x1a\\n")
+                          valid=data.startswith(bytes.fromhex("89504e470d0a1a0a"))
                       else:
-                          valid=data.startswith(b"\\xff\\xd8\\xff")
+                          valid=data.startswith(bytes.fromhex("ffd8ff"))
                       if not valid: raise ValueError("invalid asset signature")
                       target.write_bytes(data)
                       return (name,"OK",len(data))
