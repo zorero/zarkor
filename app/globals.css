@@ -1010,3 +1010,8 @@ main:not(.source-site) .articles-note { background:#fff100; padding:30px; }
   .source-site .source-hero-quick-contact a { width:46px; height:46px; }
   .source-site .source-hero-quick-contact svg { width:23px; height:23px; }
 }
+
+/* Original Elementor contact SVG files already contain their turquoise circular background. */
+.source-site .source-hero-quick-contact a,
+.source-site .source-hero-quick-contact a:hover { background:transparent; }
+.source-site .source-hero-quick-contact a img { display:block; width:100%; height:100%; object-fit:contain; }
