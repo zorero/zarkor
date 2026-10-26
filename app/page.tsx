@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Clock3, MapPin, NotebookPen, Lightbulb, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { WhatsAppForm } from "./components/WhatsAppForm";
 
 export const metadata: Metadata = {
@@ -16,10 +16,10 @@ const qualities = [
   { title: "אינטליגנציה רגשית", text: "תמיכה רגשית וחיבור עמוק שיעזרו לך להתמודד עם אתגרים." },
 ];
 const sessionFacts = [
-  { Icon: NotebookPen, lines: <>תהליך האימון<br/>מורכב מ-12 מפגשים</> },
-  { Icon: MapPin, lines: <>המפגשים מתקיימים<br/>בקליניקה באשדוד או בזום</> },
-  { Icon: Clock3, lines: <>אורך המפגש<br/>כשעה</> },
-  { Icon: Lightbulb, lines: <>התהליך כולל משימות<br/>כדי להעמיק ולהעצים את השינוי</> },
+  { image: "icon7-1.svg", lines: <>תהליך האימון<br/>מורכב מ-12 מפגשים</> },
+  { image: "icon8-2.svg", lines: <>המפגשים מתקיימים<br/>בקליניקה באשדוד או בזום</> },
+  { image: "icon9-1.svg", lines: <>אורך המפגש<br/>כשעה</> },
+  { image: "icon10-1.svg", lines: <>התהליך כולל משימות<br/>כדי להעמיק ולהעצים את השינוי</> },
 ];
 const questions = [
   "האם אתם נמצאים לקראת צומת קבלת החלטות חשובה בחייכם?",
@@ -74,7 +74,7 @@ export default function Home() {
           <h2 className="source-section-title">על התהליך</h2>
           <p className="source-process-intro">בתהליך האימון נצא למסע לגילוי עצמי. נלמד להוציא מתיק הגב את הדברים המכבידים, כמו פרדיגמות וחסמים שמעכבים אותנו. במהלך המסע נגיע לצמתים שבהם הבחירה תהיה שלך, והתפקיד שלי יהיה לשאול את השאלות הנכונות כדי להאיר בעזרת זרקור את הדרך.</p>
           <div className="source-facts">
-            {sessionFacts.map(({ Icon,lines },index)=><div key={index} className="source-fact"><span className="source-icon"><Icon size={27}/></span><p>{lines}</p></div>)}
+            {sessionFacts.map(({ image,lines },index)=><div key={index} className="source-fact"><span className="source-icon"><img src={`/images/elementor/${image}`} width="62" height="62" alt="" /></span><p>{lines}</p></div>)}
           </div>
           <div className="source-slogan"><h3>אין בעיות לפתור רק אמת לגלות</h3></div>
         </div>
@@ -84,7 +84,7 @@ export default function Home() {
         <div className="container">
           <h2 className="source-section-title">האם זה בכלל בשבילי?</h2>
           <div className="source-fit-grid">
-            {questions.map((q,i)=><article key={q}><span className="source-fit-symbol">{String(i+1).padStart(2,"0")}</span><p>{q}</p></article>)}
+            {questions.map((q,i)=><article key={q}><img className="source-fit-symbol" src="/images/elementor/v.svg" width="52" height="52" alt="" /><p>{q}</p></article>)}
           </div>
           <p className="source-fit-conclusion">אם עניתם כן על אחת (או יותר) מהשאלות, זה הרגע ליצור קשר ולקבוע פגישת התאמה ללא עלות.</p>
         </div>
