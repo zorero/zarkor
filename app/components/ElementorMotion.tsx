@@ -6,6 +6,7 @@ import { useEffect } from "react";
 export function ElementorMotion() {
   useEffect(() => {
     const nodes = document.querySelectorAll<HTMLElement>("[data-elementor-motion]");
+    document.documentElement.classList.add("elementor-motion-ready");
     if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       nodes.forEach((node) => node.classList.add("elementor-motion-visible"));
       return;
@@ -22,7 +23,10 @@ export function ElementorMotion() {
       { threshold: 0.12, rootMargin: "0px 0px -24px 0px" },
     );
     nodes.forEach((node) => observer.observe(node));
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      document.documentElement.classList.remove("elementor-motion-ready");
+    };
   }, []);
   return null;
 }
