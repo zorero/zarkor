@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Heebo:wght@400;500;600;700;800&family=Secular+One&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "../vendor/shadcn-tailwind-4.13.0.css";
@@ -683,4 +684,132 @@ h3 { font-size: 1.25rem; }
   .feature-grid { gap: 1px; }
   .feature-card { border-left: 0; border-bottom: 1px solid rgba(255,255,255,0.68); }
   .hero-visual::before { inset: 82px; }
+}
+
+
+/* Zarkor homepage: editorial Hebrew typography, 2026 refresh */
+.home-page {
+  --font-reading: "Heebo", "Open Sans Hebrew Condensed", Arial, sans-serif;
+  --font-editorial: "Frank Ruhl Libre", Georgia, serif;
+  --font-emphasis: "Secular One", "Heebo", sans-serif;
+  font-family: var(--font-reading);
+}
+.home-page p,
+.home-page li { line-height: 1.83; }
+.home-page .hero-copy h1,
+.home-page h2 {
+  font-family: var(--font-editorial);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+.home-page .hero-copy h1 {
+  font-size: clamp(3.25rem, 6.1vw, 6.75rem);
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+.home-page .hero-copy h1 span {
+  font-family: var(--font-emphasis);
+  font-size: 0.77em;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+}
+.home-page h2 { font-size: clamp(2.45rem, 4.3vw, 4.15rem); }
+.home-page h3,
+.home-page .path-stop b { font-family: var(--font-emphasis); font-weight: 400; letter-spacing: -0.02em; }
+.home-page .eyebrow {
+  font-family: var(--font-reading);
+  font-size: 0.87rem;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+}
+.home-page .hero-lead {
+  font-size: clamp(1.2rem, 1.8vw, 1.52rem);
+  line-height: 1.85;
+  max-width: 610px;
+}
+.home-page .hero-section {
+  background: linear-gradient(116deg, #fff 9%, #f4fcfd 62%, #e7f8fa 100%);
+}
+.home-page .hero-grid { gap: clamp(32px, 5vw, 82px); }
+.home-page .hero-copy { padding-block: 24px; }
+.home-page .hero-copy .eyebrow { margin-bottom: 23px; }
+.home-page .button {
+  font-family: var(--font-reading);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.home-page .signature-line {
+  font-family: var(--font-editorial);
+  font-size: clamp(1.22rem, 1.65vw, 1.55rem);
+  font-weight: 600;
+}
+.home-page .section-heading { margin-bottom: 56px; }
+.home-page .section-heading.centered {
+  background-image: none;
+  min-height: 0;
+  padding: 0 12px 26px;
+  position: relative;
+}
+.home-page .section-heading.centered::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 34px);
+  width: 68px;
+  height: 4px;
+  background: var(--yellow);
+}
+.home-page .question-list { gap: 12px; }
+.home-page .question-item {
+  padding: 20px 25px;
+  box-shadow: none;
+  background: rgba(255,255,255,0.82);
+}
+.home-page .question-item p { font-size: clamp(1.07rem, 1.5vw, 1.22rem); font-weight: 500; }
+.home-page .section-closing { font-family: var(--font-editorial); font-size: 1.42rem; line-height: 1.65; }
+.home-page .split-heading {
+  border-bottom-width: 2px;
+  gap: 54px;
+  padding-bottom: 36px;
+}
+.home-page .split-heading > p { font-size: 1.16rem; line-height: 1.85; }
+.home-page .feature-grid { gap: 1px; }
+.home-page .feature-card {
+  padding: clamp(26px, 3vw, 44px);
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid #e5f0f2;
+}
+.home-page .feature-card h3 { color: #008fa8; font-size: 1.55rem; }
+.home-page .feature-card p { color: var(--ink-soft); font-size: 1.05rem; }
+.home-page .feature-card:hover { background: #f3fbfc; }
+.home-page .process-copy > p:not(.eyebrow) { font-size: 1.13rem; line-height: 1.85; }
+.home-page .testimonial-grid blockquote {
+  border-radius: 2px;
+  border-top: 4px solid var(--cyan);
+  background: #f8f9f9;
+}
+.home-page .testimonial-grid blockquote p {
+  font-family: var(--font-editorial);
+  font-size: clamp(1.26rem, 1.7vw, 1.55rem);
+  line-height: 1.7;
+}
+.home-page .cta-inner h2 {
+  font-family: var(--font-editorial);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+@media (max-width: 780px) {
+  .home-page .hero-copy h1 { font-size: clamp(2.7rem, 10vw, 4.3rem); }
+  .home-page .hero-copy h1 span { font-size: .83em; }
+  .home-page .hero-lead { font-size: 1.18rem; }
+  .home-page h2 { font-size: clamp(2.15rem, 8vw, 3.3rem); }
+  .home-page .hero-grid { gap: 18px; }
+  .home-page .section-heading { margin-bottom: 34px; }
+  .home-page .split-heading { gap: 20px; }
+  .home-page .feature-card { padding: 28px 25px; }
+  .home-page .question-item { padding: 17px 15px; }
 }
