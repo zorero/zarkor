@@ -16,7 +16,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container header-inner">
         <Link className="brand" href="/" aria-label="זרקור, חזרה לדף הבית">
-          <Image src="/images/zarkor-logo.svg" alt="זרקור, אימון אישי לגברים" width={96} height={96} priority />
+          <Image src="/images/elementor/zarkor-logo-1.svg" alt="זרקור, אימון אישי לגברים" width={96} height={96} priority />
         </Link>
 
         <nav className="desktop-nav" aria-label="ניווט ראשי">
