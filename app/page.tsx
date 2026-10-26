@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { PhoneCall, MessageCircle } from "lucide-react";
 import { WhatsAppForm } from "./components/WhatsAppForm";
 
 export const metadata: Metadata = {
@@ -48,8 +47,8 @@ export default function Home() {
     <main className="source-site">
       <section className="source-hero">
         <div className="source-hero-quick-contact" aria-label="דרכי יצירת קשר מהירות">
-          <a href="https://wa.me/972528260661" target="_blank" rel="noopener noreferrer" aria-label="שליחת הודעה בוואטסאפ"><MessageCircle size={29} strokeWidth={2.5} aria-hidden="true" /></a>
-          <a href="tel:+972528260661" aria-label="התקשרו אליי"><PhoneCall size={27} strokeWidth={2.5} aria-hidden="true" /></a>
+          <a href="https://wa.me/972528260661" target="_blank" rel="noopener noreferrer" aria-label="שליחת הודעה בוואטסאפ"><Image src="/images/elementor/icon2.svg" width={60} height={60} alt="" aria-hidden="true" /></a>
+          <a href="tel:+972528260661" aria-label="התקשרו אליי"><Image src="/images/elementor/icon1.svg" width={60} height={60} alt="" aria-hidden="true" /></a>
         </div>
         <div className="container source-hero-content">
           <div className="source-hero-brand"><Image src="/images/elementor/zarkor-logo-1.svg" width={340} height={230} alt="זרקור: מאמן לגברים, שנשים אוהבות" priority /></div>
