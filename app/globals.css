@@ -1180,3 +1180,34 @@ main:not(.source-site) .articles-note { background:#fff100; padding:30px; }
  .source-site .source-quote-top {top:30px;right:28px;}
  .source-site .source-quote-bottom {bottom:32px;left:28px;}
 }
+
+
+/* About page: readable long-form type, balanced against large editorial heading */
+main:not(.source-site) .story-grid .story-main {
+  max-width:100%;
+  min-width:0;
+}
+main:not(.source-site) .story-grid .story-main > p:not(.eyebrow) {
+  font-size:clamp(1.35rem,1.65vw,1.7rem);
+  line-height:1.75;
+  color:#404041;
+  margin-block:0 1.25em;
+}
+main:not(.source-site) .story-grid .story-main h2 {
+  font-size:clamp(2.7rem,4.2vw,4.7rem);
+  line-height:1.18;
+  margin-bottom:32px;
+}
+main:not(.source-site) .story-grid .story-main .eyebrow {
+  font-size:1.1rem;
+  margin-bottom:22px;
+}
+@media(max-width:780px) {
+  main:not(.source-site) .story-grid .story-main > p:not(.eyebrow) {
+    font-size:1.28rem;
+    line-height:1.75;
+  }
+  main:not(.source-site) .story-grid .story-main h2 {
+    font-size:clamp(2.5rem,8vw,3.5rem);
+  }
+}
