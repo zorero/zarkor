@@ -28,12 +28,12 @@ export function WhatsAppForm() {
         <h2>השאר פרטים</h2>
         <p>בלחיצה על הכפתור תיפתח הודעת WhatsApp מוכנה לשליחה.</p>
       </div>
-      <label>שם מלא<input name="name" type="text" autoComplete="name" required placeholder="איך לפנות אליך?" /></label>
+      <label>שם מלא<input name="name" type="text" autoComplete="name" required placeholder="איך לפנות אליך ?" /></label>
       <div className="form-row">
         <label>טלפון<input name="phone" type="tel" inputMode="tel" autoComplete="tel" required placeholder="050-0000000" /></label>
         <label>מייל, לא חובה<input name="email" type="email" autoComplete="email" placeholder="name@example.com" /></label>
       </div>
-      <label>מה מביא אותך עכשיו?<textarea name="note" rows={4} placeholder="אפשר לכתוב במשפט אחד. אפשר גם להשאיר ריק." /></label>
+      <label>מה מביא אותך עכשיו ?<textarea name="note" rows={4} placeholder="אפשר לכתוב במשפט אחד. אפשר גם להשאיר ריק." /></label>
       <button className="button button-primary" type="submit"><Send size={18} /> פתיחת הודעה ב-WhatsApp</button>
       <small className="privacy-note">הפרטים אינם נשמרים באתר. הם עוברים ל-WhatsApp רק לאחר אישורך.</small>
     </form>
