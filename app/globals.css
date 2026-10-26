@@ -852,3 +852,32 @@ h3 { font-size: 1.25rem; }
   .source-site .source-contact .contact-form { box-shadow:6px 6px 0 rgba(64,64,65,.15); }
   .source-site .source-contact > .container > h2 { font-size:clamp(1.85rem,7vw,2.6rem); }
 }
+
+
+/* Reproduce original landing hero: centered branding, visible blue photographic background */
+.source-site .source-hero {
+  background: #c5eef3 url("/images/elementor/hero1.jpg") center center/cover no-repeat;
+  min-height:600px;
+  text-align:center;
+}
+.source-site .source-hero::before { display:none; }
+.source-site .source-hero-content { max-width:1180px; padding:40px 0 50px; }
+.source-site .source-hero-brand { display:flex; justify-content:center; margin:0 auto 40px; }
+.source-site .source-hero-brand img { width:min(240px,55vw); height:auto; max-height:240px; object-fit:contain; }
+.source-site .source-hero h1 {
+  max-width:1020px; margin:0 auto 24px;
+  color:#00b7ce; font-size:clamp(2.1rem,3vw,3.3rem);
+  font-family:"Open Sans Hebrew Condensed",Arial,sans-serif;
+  font-weight:700; line-height:1.13;
+}
+.source-site .source-hero p {
+  max-width:1030px; margin:0 auto;
+  color:#404041; font-size:clamp(1.4rem,1.9vw,1.95rem); line-height:1.45;
+}
+@media(max-width:780px) {
+  .source-site .source-hero { min-height:530px; }
+  .source-site .source-hero-content { padding:48px 0 65px; }
+  .source-site .source-hero-brand img { width:min(210px,55vw); }
+  .source-site .source-hero h1 { font-size:clamp(2rem,7vw,3rem); }
+  .source-site .source-hero p { font-size:clamp(1.3rem,4.3vw,1.65rem); }
+}
