@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <PageHero eyebrow="בוא נדבר" title="שיחת התאמה מתחילה בשאלה פשוטה: מה מביא אותך עכשיו?">
+      <PageHero eyebrow="בוא נדבר" title="שיחת התאמה מתחילה בשאלה פשוטה: מה מביא אותך עכשיו ?">
         <p>אין צורך להכין נאום. משאירים פרטים או פונים ישירות, ונבדוק יחד אם התהליך מתאים.</p>
       </PageHero>
 
