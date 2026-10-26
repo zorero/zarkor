@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import Image from "next/image";
 import { WhatsAppForm } from "./components/WhatsAppForm";
 
 export const metadata: Metadata = {
@@ -48,9 +47,9 @@ export default function Home() {
     <main className="source-site">
       <section className="source-hero">
         <div className="container source-hero-content">
-          <h1>המסע שלי החל בתור לקוח.<br/><strong>היום, אני כאן כדי לעזור לך להתחיל את שלך.</strong></h1>
+          <div className="source-hero-brand"><Image src="/images/elementor/zarkor-logo-1.svg" width={340} height={230} alt="זרקור: מאמן לגברים, שנשים אוהבות" priority /></div>
+          <h1>המסע שלי החל בתור לקוח. היום, אני כאן כדי לעזור לך להתחיל את שלך.</h1>
           <p>חוויתי על בשרי את הכוח של אימון אישי. אחרי שנים של חיפוש, מצאתי את הכלים והתמיכה ששינו את חיי מקצה לקצה. היום, אני כאן כדי להעביר את זה הלאה ולעזור לך להשיג את מה שחשוב לך.</p>
-          <Link className="source-primary-link" href="#contact-first">לשיחת התאמה ללא עלות <ArrowLeft size={20}/></Link>
         </div>
       </section>
 
