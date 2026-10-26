@@ -35,7 +35,7 @@ export default function ArticlesPage() {
         <div className="container articles-note">
           <p>בינתיים אפשר לקרוא תכנים חדשים בעמוד הפייסבוק של זרקור.</p>
           <a className="text-link" href="https://www.facebook.com/zarkor.life.coaching" target="_blank" rel="noreferrer">לעמוד הפייסבוק <ArrowLeft size={17} /></a>
-          <Link className="button button-ghost" href="/contact">יש נושא שמעסיק אותך? בוא נדבר</Link>
+          <Link className="button button-ghost" href="/contact">יש נושא שמעסיק אותך ? בוא נדבר</Link>
         </div>
       </section>
     </main>
