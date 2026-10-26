@@ -1,0 +1,63 @@
+name: Import original Elementor media
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/import-elementor-media.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-media:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify original website assets
+        env:
+          FILES: 'zarkor_LP.png qout.png v.svg icon10-1.svg icon9-1.svg icon8-2.svg icon7-1.svg icon9.svg icon10.svg icon7.svg bgtitle-1.png bgtitle.png hero2-1.jpg hero2.jpg hero1.jpg icon6.svg icon5.svg icon4.svg icon3.svg icon2.svg icon1.svg zarkor-logo-favi.png zarkor-logo-favi.svg zarkor-logo-1.svg'
+        run: |
+          python3 - <<'PY'
+          import os, pathlib, urllib.request, time
+          from concurrent.futures import ThreadPoolExecutor
+          root = pathlib.Path("public/images/elementor")
+          root.mkdir(parents=True,exist_ok=True)
+          files = os.environ["FILES"].split()
+          base = "https://zarkorjourney.co.il/wp-content/uploads/2024/09/"
+          def fetch(name):
+              target=root/name
+              for attempt in range(3):
+                  try:
+                      req=urllib.request.Request(base+name,headers={"User-Agent":"Mozilla/5.0 (compatible; SiteAssetImporter/1.0)"})
+                      with urllib.request.urlopen(req,timeout=22) as response:
+                          data=response.read()
+                      if name.endswith(".svg"):
+                          valid=b"<svg" in data[:5000] or b"<svg" in data
+                      elif name.endswith(".png"):
+                          valid=data.startswith(b"\\x89PNG\\r\\n\\x1a\\n")
+                      else:
+                          valid=data.startswith(b"\\xff\\xd8\\xff")
+                      if not valid: raise ValueError("invalid asset signature")
+                      target.write_bytes(data)
+                      return (name,"OK",len(data))
+                  except Exception as e:
+                      error=str(e)
+                      time.sleep(2)
+              return (name,"FAIL",error)
+          with ThreadPoolExecutor(max_workers=4) as pool:
+              results=list(pool.map(fetch,files))
+          for name,status,detail in results: print(f"{status}: {name} ({detail})")
+          if any(status=="FAIL" for _,status,_ in results):
+              raise SystemExit("Some original assets could not be downloaded")
+          PY
+      - name: Commit verified assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images/elementor
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: import verified original Elementor media"
+            git push
+          fi
