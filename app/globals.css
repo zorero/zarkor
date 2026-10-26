@@ -755,3 +755,16 @@ h3 { font-size: 1.25rem; }
   .source-qualities,.source-fit,.source-testimonials { padding-block:70px; }
   .source-fact p { font-size:1.35rem; }
 }
+
+
+/* Exact original Elementor media assets, imported to public/images/elementor */
+.source-hero { background-image:url("/images/elementor/hero1.jpg"); }
+.source-image-band { background-image:linear-gradient(rgba(255,255,255,.65),rgba(255,255,255,.65)),url("/images/elementor/hero2-1.jpg"); }
+.source-site .source-section-title { background:url("/images/elementor/bgtitle.png") center/contain no-repeat; padding:18px 0 25px; }
+.source-site .source-section-title::after { display:none; }
+.source-icon { width:76px; height:76px; transform:none; background:transparent; }
+.source-icon img { display:block; width:100%; height:100%; object-fit:contain; max-width:none; }
+.source-fit-symbol { display:block; width:52px; height:52px; margin:0 auto 17px; object-fit:contain; }
+.source-slogan { background-image:url("/images/elementor/bgtitle-1.png"); background-repeat:no-repeat; background-position:center; background-size:contain; }
+.source-testimonial-grid blockquote>span { display:inline-block; width:38px; height:38px; background:url("/images/elementor/qout.png") center/contain no-repeat; font-size:0; }
+.source-testimonial-grid blockquote>span::before { content:""; }
