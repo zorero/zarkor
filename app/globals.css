@@ -1110,3 +1110,73 @@ main:not(.source-site) .articles-note { background:#fff100; padding:30px; }
  .source-site .source-fit-grid p {font-size:1.65rem;}
  .source-site .source-fit-symbol {width:52px;height:52px;}
 }
+
+
+/* Elementor-style testimonial carousel: single large quotation and turquoise controls */
+.source-site .source-testimonials {
+  background:linear-gradient(to bottom,#fff 0%,#fff 64%,#404041 64%,#404041 100%);
+  padding:90px 0 85px;
+}
+.source-site .source-testimonials .source-section-title { margin-bottom:45px; }
+.source-site .source-testimonial-carousel {
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:min(100%,1590px);
+  margin:0 auto;
+  gap:clamp(14px,3vw,55px);
+}
+.source-site .source-testimonial-slide {
+  position:relative;
+  flex:1;
+  max-width:1250px;
+  min-height:590px;
+  margin:0;
+  padding:clamp(58px,6vw,92px) clamp(55px,7vw,112px);
+  border-radius:44px;
+  background:#f2f2f2;
+  color:#404041;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.source-site .source-testimonial-slide p {
+  margin:0;
+  text-align:center;
+  font-size:clamp(1.5rem,2.4vw,2.55rem);
+  line-height:1.57;
+  color:#404041;
+  font-weight:400;
+}
+.source-site .source-quote-top,
+.source-site .source-quote-bottom {
+  position:absolute;
+  color:#00b7ce;
+  font-size:clamp(3.3rem,4.5vw,5rem);
+  font-weight:700;
+  line-height:1;
+}
+.source-site .source-quote-top {top:45px;right:46px;}
+.source-site .source-quote-bottom {bottom:80px;left:100px;}
+.source-site .testimonial-arrow {
+  flex:0 0 auto;
+  border:0;
+  background:transparent;
+  color:#00b7ce;
+  padding:12px;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+}
+.source-site .testimonial-arrow:hover { color:#008aa0; }
+.source-site .testimonial-arrow:focus-visible {outline:3px solid #00b7ce;outline-offset:3px;}
+@media(max-width:780px) {
+ .source-site .source-testimonial-carousel {gap:0;}
+ .source-site .source-testimonial-slide {min-height:480px;padding:80px 26px 90px;border-radius:28px;}
+ .source-site .source-testimonial-slide p {font-size:clamp(1.35rem,4vw,1.8rem);}
+ .source-site .testimonial-arrow {padding:3px;}
+ .source-site .testimonial-arrow svg {width:30px;height:30px;}
+ .source-site .source-quote-top {top:30px;right:28px;}
+ .source-site .source-quote-bottom {bottom:32px;left:28px;}
+}
