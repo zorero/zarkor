@@ -978,3 +978,35 @@ main:not(.source-site) .articles-note { background:#fff100; padding:30px; }
   main:not(.source-site) .page-hero h1 { font-size:clamp(2.7rem,9vw,4.2rem); }
   main:not(.source-site) .section-heading.centered { background-size:cover; }
 }
+
+
+/* Original Elementor hero quick contact shortcuts */
+.source-site .source-hero-quick-contact {
+  position:absolute;
+  z-index:5;
+  top:28px;
+  left:clamp(24px,4vw,70px);
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:16px;
+  direction:ltr;
+}
+.source-site .source-hero-quick-contact a {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#00b7ce;
+  color:#fff;
+  transition:background-color .2s ease,transform .2s ease;
+}
+.source-site .source-hero-quick-contact a:hover { background:#008ca0; transform:translateY(-2px); }
+.source-site .source-hero-quick-contact a:focus-visible { outline:3px solid #404041; outline-offset:4px; }
+@media(max-width:780px) {
+  .source-site .source-hero-quick-contact { top:18px; left:18px; gap:10px; }
+  .source-site .source-hero-quick-contact a { width:46px; height:46px; }
+  .source-site .source-hero-quick-contact svg { width:23px; height:23px; }
+}
