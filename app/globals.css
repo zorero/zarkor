@@ -1040,3 +1040,75 @@ body { font-family: "Heebo","Open Sans Hebrew Condensed",Arial,sans-serif; }
 .cta-inner .button-light { background:#fff100; border-radius:2px; color:#172d34; }
 .site-footer { background:#172d34; font-family:"Heebo",sans-serif; }
 @media (prefers-reduced-motion: reduce) { .button, .feature-card, .desktop-nav a::after { transition:none; } }
+
+
+/* Accessibility and cohesive redesign correction: stable RTL layout */
+.home-page .hero-section { background:#f5f3eb; isolation:auto; min-height:0; }
+.home-page .hero-section::after { display:none; }
+.home-page .hero-grid {
+  display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  gap:clamp(42px,5vw,78px); min-height:650px; align-items:center;
+  padding-block:clamp(55px,7vw,95px);
+}
+.home-page .hero-copy { min-width:0; max-width:100%; padding:0; }
+.home-page .hero-copy h1 {
+  color:#172d34; font-size:clamp(3.5rem,5vw,5.6rem);
+  max-width:100%; line-height:1.11; overflow-wrap:normal;
+}
+.home-page .hero-copy h1 span {
+  display:block; color:#007f95; font-size:.75em;
+}
+.home-page .hero-copy .eyebrow { color:#006c7d; }
+.home-page .hero-lead { color:#344a50; max-width:570px; }
+.home-page .hero-visual {
+  width:100%; min-width:0; min-height:460px;
+  background:#fff; border:1px solid #d5e7e7;
+  box-shadow:16px 16px 0 #00b7ce;
+  padding:50px 30px; overflow:hidden;
+}
+.home-page .hero-visual::before { border:1px solid #cfe9e9; inset:18px; }
+.home-page .hero-logo { width:min(74%,330px); filter:none; }
+.home-page .hero-visual-index { color:#007f95; }
+.home-page .hero-visual-caption { color:#486066; }
+.home-page .signature-line { color:#172d34; bottom:54px; }
+.home-page .hero-meta { color:#344a50; }
+.home-page .editorial-questions .question-item p { color:#fff; }
+.home-page .editorial-questions .question-mark { color:#fff100; }
+.home-page .editorial-approach .feature-card:first-child { border-right:1px solid #bed3d7; }
+.home-page .editorial-approach .feature-card:last-child { border-left:0; }
+/* Extend the same art direction to every interior route */
+body { color:#243e45; background:#f7f7f3; }
+.site-header { background:#fff; }
+.page-hero { background:#e4f2f2; border-bottom:8px solid #fff100; }
+.page-hero h1 { color:#172d34; }
+.page-hero-copy { color:#2e4a51; }
+.page-hero .container { position:relative; z-index:1; }
+.section:not(.home-page .section) { background:#f7f7f3; }
+.section-soft:not(.home-page .section-soft) { background:#e2f0ef; }
+.section-dark:not(.home-page .section-dark) { background:#173b44; color:#fff; }
+.section-dark:not(.home-page .section-dark) h2 { color:#fff; }
+.section-dark:not(.home-page .section-dark) .eyebrow { color:#fff100; }
+.story-main, .rich-copy, .large-copy { line-height:1.85; }
+.quote-panel { background:#173b44; color:#fff; }
+.quote-panel blockquote { color:#fff; }
+.value-card, .area-card, .topic-card {
+  background:#fff; border-radius:2px; box-shadow:none;
+  border-top:5px solid #00b7ce;
+}
+.value-card:nth-child(even), .area-card:nth-child(even), .topic-card:nth-child(even) { border-top-color:#e9d800; }
+.faq-list details { background:#fff; border-right:4px solid #00b7ce; }
+.contact-card { background:#173b44; }
+.contact-form { background:#e5f1f0; }
+.site-footer { background:#172d34; }
+@media (max-width:900px) {
+  .home-page .hero-grid { gap:30px; grid-template-columns:minmax(0,1fr) minmax(0,.9fr); }
+  .home-page .hero-copy h1 { font-size:clamp(2.9rem,5.5vw,4.2rem); }
+  .home-page .hero-visual { min-height:385px; }
+}
+@media (max-width:780px) {
+  .home-page .hero-grid { grid-template-columns:minmax(0,1fr); gap:38px; min-height:0; padding-block:60px 80px; }
+  .home-page .hero-copy h1 { font-size:clamp(3rem,10vw,4.3rem); }
+  .home-page .hero-visual { width:calc(100% - 15px); min-height:350px; box-shadow:12px 12px 0 #00b7ce; }
+  .home-page .hero-section::after { display:none; }
+  .home-page .editorial-questions-grid { grid-template-columns:1fr; }
+}
