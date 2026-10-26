@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { WhatsAppForm } from "./components/WhatsAppForm";
 import { ElementorMotion } from "./components/ElementorMotion";
+import { TestimonialCarousel } from "./components/TestimonialCarousel";
 
 export const metadata: Metadata = {
   title: "זרקור | אימון אישי עם אביחי",
@@ -99,9 +100,7 @@ export default function Home() {
       <section className="source-testimonials">
         <div className="container">
           <h2 className="source-section-title" data-elementor-motion="fadeIn" data-motion-delay="600">מתאמנים ממליצים</h2>
-          <div className="source-testimonial-grid">
-            {testimonials.map((t,i)=><blockquote key={i}><span aria-hidden="true">״</span><p>{t}</p><footer>מתוך משוב מתאמן</footer></blockquote>)}
-          </div>
+          <TestimonialCarousel testimonials={testimonials} />
         </div>
       </section>
     </main>
