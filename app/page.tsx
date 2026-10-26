@@ -53,7 +53,7 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
       <section className="hero-section">
         <div className="spotlight-beam" aria-hidden="true" />
         <div className="container hero-grid">
