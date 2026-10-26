@@ -903,3 +903,121 @@ h3 { font-size: 1.25rem; }
   .home-page .hero-section::after { width: 240px; top: -120px; left: -130px; }
   .home-page .feature-grid { gap: 12px; }
 }
+
+
+/* 2026 editorial art direction: designed rhythm, not template cards */
+:root { --editorial-dark: #172d34; --editorial-teal: #00b7ce; --editorial-yellow: #fff100; }
+body { font-family: "Heebo","Open Sans Hebrew Condensed",Arial,sans-serif; }
+.site-header { border-bottom: 1px solid rgba(15,51,60,.12); background: rgba(255,255,255,.97); }
+.header-inner { min-height: 82px; }
+.desktop-nav a { font-family: "Heebo",sans-serif; font-weight: 600; font-size: .95rem; }
+.header-cta { background: var(--editorial-dark); border-radius: 3px; font-family: "Heebo",sans-serif; }
+.header-cta:hover { background: #007f94; }
+.home-page { overflow: clip; }
+.home-page .section { padding-block: clamp(85px,10vw,145px); }
+.home-page .hero-section {
+  min-height: min(850px,95vh);
+  background: #f6f7f4;
+  isolation: isolate;
+}
+.home-page .hero-section::after {
+  content: ""; position: absolute; right: 0; top: 0; bottom: 0;
+  width: 41%; background: #123941; transform: none; border: none;
+  pointer-events: none; z-index: -1;
+}
+.home-page .hero-grid { min-height: 730px; gap: clamp(45px,6vw,92px); grid-template-columns: 1.1fr .9fr; }
+.home-page .hero-copy { position: relative; z-index: 3; }
+.home-page .hero-copy .eyebrow { margin-bottom: 30px; background: transparent; padding: 0 0 12px; border-bottom: 3px solid var(--editorial-yellow); color: #006b7d; width: fit-content; }
+.home-page .hero-copy h1 { color: var(--editorial-dark); font-size: clamp(4rem,6.4vw,7rem); line-height: 1.06; letter-spacing: -.05em; font-family: "Frank Ruhl Libre",serif; font-weight: 700; }
+.home-page .hero-copy h1 span { margin-top: 12px; color: #007f95; font-family: "Secular One","Heebo",sans-serif; font-size: .73em; letter-spacing: -.035em; }
+.home-page .hero-lead { max-width: 550px; color: #30464d; font-size: clamp(1.12rem,1.65vw,1.4rem); line-height: 1.8; }
+.home-page .hero-actions { margin-top: 32px; }
+.home-page .hero-actions .button-primary { background: var(--editorial-dark); color: white; box-shadow: none; border-radius: 2px; padding-inline: 28px; }
+.home-page .hero-actions .button-primary:hover { background: #006c80; }
+.home-page .hero-actions .button-ghost { border: 0; border-bottom: 2px solid #007f95; color: #163a43; border-radius: 0; background: transparent; }
+.home-page .hero-meta { margin-top: 48px; font-size: .91rem; color: #42585e; }
+.home-page .hero-visual { background: #05adc2; min-height: 520px; padding: 55px 25px; position: relative; border: 0; border-radius: 0; box-shadow: 24px 24px 0 rgba(255,241,0,.95); }
+.home-page .hero-visual::before { inset: 18px; border: 1px solid rgba(255,255,255,.55); opacity: 1; background: none; transform: none; }
+.home-page .hero-logo { width: min(65%,300px); filter: drop-shadow(0 16px 20px rgba(0,42,53,.15)); }
+.home-page .hero-visual-index { position: absolute; top: 28px; right: 32px; direction: ltr; color: rgba(255,255,255,.87); font: 600 12px "Heebo",sans-serif; letter-spacing: .18em; }
+.home-page .hero-visual-caption { position: absolute; bottom: 25px; left: 32px; color: rgba(255,255,255,.9); font-size: .8rem; }
+.home-page .signature-line { color: #fff; bottom: 73px; max-width: 90%; white-space: normal; text-align: center; font-size: 1.35rem; font-weight: 600; }
+.home-page .eyebrow { letter-spacing: 0; font-size: .86rem; }
+.home-page .editorial-questions { background: var(--editorial-dark); color: #fff; }
+.home-page .editorial-questions-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(40px,7vw,125px); align-items: start; }
+.home-page .editorial-questions-intro { position: sticky; top: 120px; }
+.home-page .editorial-questions h2 { color: white; font-size: clamp(2.7rem,4.2vw,4.4rem); line-height: 1.15; }
+.home-page .editorial-questions h2 em { color: var(--editorial-yellow); font-style: normal; display: block; }
+.home-page .editorial-questions .eyebrow { color: var(--editorial-yellow); background: transparent; }
+.home-page .questions-aside { max-width: 330px; color: #b9d7dc; font-size: 1.1rem; line-height: 1.8; }
+.home-page .editorial-questions .question-list { margin: 0; gap: 0; }
+.home-page .editorial-questions .question-item { grid-template-columns: 58px 1fr; padding: 30px 5px; border: 0; border-bottom: 1px solid rgba(255,255,255,.27); background: transparent; color: white; box-shadow: none; gap: 24px; }
+.home-page .editorial-questions .question-item:first-child { border-top: 1px solid rgba(255,255,255,.27); }
+.home-page .editorial-questions .question-mark { display: block; width: auto; height: auto; color: var(--editorial-yellow); background: none; border: 0; transform: none; font: 700 1.1rem "Heebo",sans-serif; }
+.home-page .editorial-questions .question-item p { color: white; font-weight: 500; font-size: clamp(1.3rem,2vw,1.85rem); line-height: 1.55; }
+.home-page .editorial-questions .section-closing { color: #b9d7dc; max-width: 620px; font-size: 1.45rem; margin-top: 40px; }
+.home-page .editorial-approach { background: #f8f8f5 !important; }
+.home-page .editorial-approach .split-heading { border: 0; grid-template-columns: 1.2fr .8fr; align-items: end; margin-bottom: 55px; padding: 0; }
+.home-page .editorial-approach .split-heading h2 { color: var(--editorial-dark); max-width: 720px; }
+.home-page .editorial-approach .split-heading > p { border-right: 4px solid var(--editorial-yellow); padding-right: 23px; color: #425a60; }
+.home-page .editorial-approach .feature-grid { background: transparent; gap: 0; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
+.home-page .editorial-approach .feature-card,
+.home-page .editorial-approach .feature-card:nth-child(2),
+.home-page .editorial-approach .feature-card:nth-child(3) {
+  background: transparent; padding: 36px 33px 25px; border: 0; border-right: 1px solid #bed3d7; min-height: 290px; color: var(--editorial-dark);
+}
+.home-page .editorial-approach .feature-card:first-child { border-right: 0; }
+.home-page .editorial-approach .feature-card::before { content: ""; display: block; width: 100%; height: 5px; background: var(--editorial-teal); margin-bottom: 32px; }
+.home-page .editorial-approach .feature-card:nth-child(2)::before { background: var(--editorial-yellow); }
+.home-page .editorial-approach .feature-card h3 { color: var(--editorial-dark); font-size: clamp(1.36rem,1.8vw,1.75rem); }
+.home-page .editorial-approach .feature-card p { color: #4a6268; font-size: 1.05rem; }
+.home-page .editorial-approach .icon-shell { width: 54px; height: 54px; background: #dcf3f5; transform: none; margin-bottom: 30px; }
+.home-page .editorial-approach .icon-shell svg { transform: none; color: #007f95; }
+.home-page .editorial-process { background: #cbe9ed !important; }
+.home-page .editorial-process .process-grid { gap: clamp(50px,8vw,115px); align-items: center; }
+.home-page .editorial-process .process-copy h2 { color: var(--editorial-dark); max-width: 650px; }
+.home-page .editorial-process .process-copy > p:not(.eyebrow) { color: #344d54; }
+.home-page .editorial-process .path-card { background: var(--editorial-dark); border-radius: 0; border: 0; box-shadow: 17px 17px 0 #fff100; }
+.home-page .editorial-process .path-stop span { border-radius: 0; transform: none; background: #fff100; color: #123941; }
+.home-page .editorial-process .path-stop span i { transform: none; }
+.home-page .editorial-process .path-stop b { color: #fff; }
+.home-page .editorial-voices { background: #f8f8f5 !important; }
+.home-page .editorial-voices .section-heading.centered { background: none; padding: 0 0 26px; }
+.home-page .editorial-voices .section-heading.centered h2 { color: var(--editorial-dark); }
+.home-page .editorial-voices .testimonial-grid { gap: 18px; align-items: stretch; }
+.home-page .editorial-voices .testimonial-grid blockquote,
+.home-page .editorial-voices .testimonial-grid blockquote:nth-child(2),
+.home-page .editorial-voices .testimonial-grid blockquote:nth-child(3) {
+ background: #fff; border: 1px solid #d6e3e5; border-top: 5px solid var(--editorial-teal); border-radius: 0; box-shadow: none; padding: 35px 30px;
+}
+.home-page .editorial-voices .testimonial-grid blockquote:nth-child(2) { border-top-color: var(--editorial-yellow); }
+.home-page .editorial-voices .testimonial-grid blockquote p { color: #213d45; }
+.home-page .cta-section { background: #007e92; }
+.home-page .cta-inner h2 { color: white; }
+.home-page .cta-inner .button-light { background: #fff100; color: #172d34; border-radius: 2px; }
+@media (max-width: 950px) {
+ .home-page .hero-grid { grid-template-columns: 1fr 1fr; gap: 34px; }
+ .home-page .hero-copy h1 { font-size: clamp(3rem,6vw,5rem); }
+ .home-page .hero-visual { min-height: 400px; }
+ .home-page .editorial-questions-grid { grid-template-columns: 1fr 1.3fr; gap: 35px; }
+}
+@media (max-width: 780px) {
+ .home-page .hero-section { min-height: auto; }
+ .home-page .hero-section::after { width: 100%; height: 27%; top: auto; bottom: 0; }
+ .home-page .hero-grid { display: grid; grid-template-columns: 1fr; gap: 40px; padding-block: 55px 75px; min-height: 0; }
+ .home-page .hero-copy h1 { font-size: clamp(3.25rem,11vw,4.8rem); }
+ .home-page .hero-visual { width: min(100% - 20px,430px); min-height: 360px; margin-inline: auto; box-shadow: 13px 13px 0 #fff100; }
+ .home-page .hero-logo { width: min(60%,250px); }
+ .home-page .editorial-questions-grid { grid-template-columns: 1fr; gap: 30px; }
+ .home-page .editorial-questions-intro { position: static; }
+ .home-page .editorial-questions h2 em { display: inline; }
+ .home-page .editorial-questions .question-item { padding: 23px 0; gap: 12px; grid-template-columns: 45px 1fr; }
+ .home-page .editorial-approach .split-heading { display: block; }
+ .home-page .editorial-approach .split-heading > p { margin-top: 25px; }
+ .home-page .editorial-approach .feature-grid { grid-template-columns: 1fr; gap: 0; }
+ .home-page .editorial-approach .feature-card,
+ .home-page .editorial-approach .feature-card:nth-child(2),
+ .home-page .editorial-approach .feature-card:nth-child(3) { min-height: 0; border: 0; border-bottom: 1px solid #bed3d7; padding: 28px 10px 35px; }
+ .home-page .editorial-approach .feature-card::before { margin-bottom: 20px; }
+ .home-page .editorial-process .path-card { box-shadow: 12px 12px 0 #fff100; }
+}
