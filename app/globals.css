@@ -1015,3 +1015,27 @@ main:not(.source-site) .articles-note { background:#fff100; padding:30px; }
 .source-site .source-hero-quick-contact a,
 .source-site .source-hero-quick-contact a:hover { background:transparent; }
 .source-site .source-hero-quick-contact a img { display:block; width:100%; height:100%; object-fit:contain; }
+
+
+/* Elementor entrance animations extracted from content/page/22.json.
+   Content stays visible without JavaScript and with reduced-motion preference. */
+@keyframes zarkor-elementor-fade-in { from {opacity:0} to {opacity:1} }
+@keyframes zarkor-elementor-fade-in-up { from {opacity:0;transform:translate3d(0,28px,0)} to {opacity:1;transform:translate3d(0,0,0)} }
+@keyframes zarkor-elementor-zoom-in { from {opacity:0;transform:scale(.88)} to {opacity:1;transform:scale(1)} }
+@media (prefers-reduced-motion: no-preference) {
+  .elementor-motion-ready .source-site [data-elementor-motion]:not(.elementor-motion-visible) { opacity:0; }
+  .elementor-motion-ready .source-site [data-elementor-motion].elementor-motion-visible {
+    animation-duration:.85s;
+    animation-fill-mode:both;
+    animation-timing-function:ease-out;
+  }
+  .elementor-motion-ready .source-site [data-elementor-motion="fadeIn"].elementor-motion-visible {animation-name:zarkor-elementor-fade-in}
+  .elementor-motion-ready .source-site [data-elementor-motion="fadeInUp"].elementor-motion-visible {animation-name:zarkor-elementor-fade-in-up}
+  .elementor-motion-ready .source-site [data-elementor-motion="zoomIn"].elementor-motion-visible {animation-name:zarkor-elementor-zoom-in}
+  .elementor-motion-ready .source-site [data-motion-delay="400"].elementor-motion-visible {animation-delay:400ms}
+  .elementor-motion-ready .source-site [data-motion-delay="600"].elementor-motion-visible {animation-delay:600ms}
+  .elementor-motion-ready .source-site [data-motion-delay="800"].elementor-motion-visible {animation-delay:800ms}
+}
+@media (prefers-reduced-motion: reduce) {
+ .source-site [data-elementor-motion] { opacity:1!important; animation:none!important; transform:none!important; }
+}
