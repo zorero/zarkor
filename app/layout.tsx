@@ -4,7 +4,7 @@ import { SiteHeader } from "./components/SiteHeader";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zarkorjourney.co.il"),
+  metadataBase: new URL("https://zarkor-journey.zorero.workers.dev"),
   title: {
     default: "זרקור | אימון אישי לגברים עם אביחי",
     template: "%s | זרקור",
@@ -33,12 +33,12 @@ const structuredData = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://zarkorjourney.co.il/#organization",
+      "@id": "https://zarkor-journey.zorero.workers.dev/#organization",
       name: "זרקור",
       alternateName: "Zarkor Journey",
-      url: "https://zarkorjourney.co.il/",
-      logo: "https://zarkorjourney.co.il/images/zarkor-logo.svg",
-      founder: { "@id": "https://zarkorjourney.co.il/#avihai" },
+      url: "https://zarkor-journey.zorero.workers.dev/",
+      logo: "https://zarkor-journey.zorero.workers.dev/images/zarkor-logo.svg",
+      founder: { "@id": "https://zarkor-journey.zorero.workers.dev/#avihai" },
       sameAs: [
         "https://www.facebook.com/zarkor.life.coaching",
         "https://www.instagram.com/zarkor_life_coaching/",
@@ -46,11 +46,11 @@ const structuredData = {
     },
     {
       "@type": "Person",
-      "@id": "https://zarkorjourney.co.il/#avihai",
+      "@id": "https://zarkor-journey.zorero.workers.dev/#avihai",
       name: "אביחי צוררו",
       jobTitle: "מאמן אישי לגברים",
-      worksFor: { "@id": "https://zarkorjourney.co.il/#organization" },
-      url: "https://zarkorjourney.co.il/about",
+      worksFor: { "@id": "https://zarkor-journey.zorero.workers.dev/#organization" },
+      url: "https://zarkor-journey.zorero.workers.dev/about",
       telephone: "+972-52-826-0661",
       email: "zorero@gmail.com",
       address: {
@@ -61,10 +61,10 @@ const structuredData = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://zarkorjourney.co.il/#website",
-      url: "https://zarkorjourney.co.il/",
+      "@id": "https://zarkor-journey.zorero.workers.dev/#website",
+      url: "https://zarkor-journey.zorero.workers.dev/",
       name: "זרקור, אימון אישי לגברים",
-      publisher: { "@id": "https://zarkorjourney.co.il/#organization" },
+      publisher: { "@id": "https://zarkor-journey.zorero.workers.dev/#organization" },
       inLanguage: "he-IL",
     },
   ],
