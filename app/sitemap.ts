@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://zarkorjourney.co.il";
+  const base = "https://zarkor-journey.zorero.workers.dev";
   return [
     { url: `${base}/`, changeFrequency: "monthly", priority: 1 },
     { url: `${base}/about`, changeFrequency: "yearly", priority: 0.8 },
