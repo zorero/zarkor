@@ -4,9 +4,16 @@ import { PageHero } from "../components/PageHero";
 import { WhatsAppForm } from "../components/WhatsAppForm";
 
 export const metadata: Metadata = {
-  title: "יצירת קשר",
-  description: "קביעת שיחת התאמה ללא עלות עם אביחי צוררו. אפשר לפנות בטלפון, בוואטסאפ או במייל.",
+  title: "יצירת קשר ושיחת התאמה ללא עלות | זרקור",
+  description: "רוצה לבדוק אם אימון אישי מתאים לך ? אפשר ליצור קשר עם אביחי צוררו לקביעת שיחת התאמה ללא עלות, בטלפון, בוואטסאפ או במייל.",
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "יצירת קשר ושיחת התאמה ללא עלות | זרקור",
+    description: "רוצה לבדוק אם אימון אישי מתאים לך ? אפשר ליצור קשר עם אביחי צוררו לקביעת שיחת התאמה ללא עלות, בטלפון, בוואטסאפ או במייל.",
+    url: "/contact",
+    type: "website",
+    locale: "he_IL",
+  },
 };
 
 export default function ContactPage() {
