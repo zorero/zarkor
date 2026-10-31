@@ -5,11 +5,11 @@ import { ElementorMotion } from "./components/ElementorMotion";
 import { TestimonialCarousel } from "./components/TestimonialCarousel";
 
 export const metadata: Metadata = {
-  title: "זרקור | אימון אישי לגברים באשדוד ובזום | אביחי צוררו",
+  title: "אימון אישי לגברים באשדוד ובזום | זרקור - אביחי צוררו",
   description: "אימון אישי לגברים עם אביחי צוררו בקליניקה באשדוד או בזום. תהליך של 12 מפגשים לחיבור לרגשות, קבלת החלטות ושינוי מעשי בחיים.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "זרקור | אימון אישי לגברים באשדוד ובזום | אביחי צוררו",
+    title: "אימון אישי לגברים באשדוד ובזום | זרקור - אביחי צוררו",
     description: "אימון אישי לגברים עם אביחי צוררו בקליניקה באשדוד או בזום. תהליך של 12 מפגשים לחיבור לרגשות, קבלת החלטות ושינוי מעשי בחיים.",
     url: "/",
     type: "website",
