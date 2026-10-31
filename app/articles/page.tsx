@@ -4,9 +4,16 @@ import { ArrowLeft, BookOpen, MessagesSquare, Target } from "lucide-react";
 import { PageHero } from "../components/PageHero";
 
 export const metadata: Metadata = {
-  title: "מאמרים על גברים, רגשות ושינוי",
-  description: "מחשבות וכלים על גבריות, זוגיות, קבלת החלטות, הורות וחיבור רגשי מאת אביחי צוררו.",
+  title: "מחשבות על גברים, רגשות וזוגיות | זרקור",
+  description: "מחשבות ותובנות מאת אביחי צוררו על גבריות, תקשורת, זוגיות, הורות וקבלת החלטות. כאן ירוכזו מאמרים וכלים מעולם האימון האישי.",
   alternates: { canonical: "/articles" },
+  openGraph: {
+    title: "מחשבות על גברים, רגשות וזוגיות | זרקור",
+    description: "מחשבות ותובנות מאת אביחי צוררו על גבריות, תקשורת, זוגיות, הורות וקבלת החלטות. כאן ירוכזו מאמרים וכלים מעולם האימון האישי.",
+    url: "/articles",
+    type: "website",
+    locale: "he_IL",
+  },
 };
 
 const topics = [
