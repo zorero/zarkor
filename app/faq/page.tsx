@@ -4,9 +4,16 @@ import { CallToAction } from "../components/CallToAction";
 import { PageHero } from "../components/PageHero";
 
 export const metadata: Metadata = {
-  title: "שאלות נפוצות",
-  description: "תשובות על אימון אישי לגברים, מבנה התהליך, מפגשים בזום, התאמה, סודיות וההבדל בין אימון לטיפול.",
+  title: "שאלות נפוצות על אימון אישי לגברים | זרקור",
+  description: "כמה מפגשים יש באימון אישי ? האם אפשר להיפגש בזום, ואיך נראית שיחת התאמה ? תשובות לשאלות נפוצות על האימון עם אביחי צוררו.",
   alternates: { canonical: "/faq" },
+  openGraph: {
+    title: "שאלות נפוצות על אימון אישי לגברים | זרקור",
+    description: "כמה מפגשים יש באימון אישי ? האם אפשר להיפגש בזום, ואיך נראית שיחת התאמה ? תשובות לשאלות נפוצות על האימון עם אביחי צוררו.",
+    url: "/faq",
+    type: "website",
+    locale: "he_IL",
+  },
 };
 
 const faqs = [
