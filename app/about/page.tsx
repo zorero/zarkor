@@ -4,10 +4,16 @@ import { CallToAction } from "../components/CallToAction";
 import { PageHero } from "../components/PageHero";
 
 export const metadata: Metadata = {
-  title: "אודות אביחי",
-  description:
-    "הכירו את אביחי צוררו ואת הגישה שמחברת בין חשיבה רציונלית, הקשבה עמוקה ועבודה רגשית באימון אישי לגברים.",
+  title: "אודות אביחי צוררו | מאמן אישי לגברים",
+  description: "הכירו את אביחי צוררו, מאמן אישי לגברים בזרקור. על הדרך מאימון אישי כמתאמן לליווי גברים, ועל הגישה המשלבת הקשבה, אחריות ובחירה.",
   alternates: { canonical: "/about" },
+  openGraph: {
+    title: "אודות אביחי צוררו | מאמן אישי לגברים",
+    description: "הכירו את אביחי צוררו, מאמן אישי לגברים בזרקור. על הדרך מאימון אישי כמתאמן לליווי גברים, ועל הגישה המשלבת הקשבה, אחריות ובחירה.",
+    url: "/about",
+    type: "website",
+    locale: "he_IL",
+  },
 };
 
 const values = [
