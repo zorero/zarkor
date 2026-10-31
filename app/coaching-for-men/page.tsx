@@ -27,13 +27,15 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "אימון אישי לגברים",
-  provider: { "@id": "https://zarkorjourney.co.il/#organization" },
+  serviceType: "אימון אישי והעצמה אישית לגברים",
+  url: "https://zarkor-journey.zorero.workers.dev/coaching-for-men",
+  provider: { "@id": "https://zarkor-journey.zorero.workers.dev/#organization" },
   areaServed: ["אשדוד", "ישראל"],
   availableChannel: [
     { "@type": "ServiceChannel", serviceLocation: { "@type": "Place", name: "קליניקה באשדוד" } },
-    { "@type": "ServiceChannel", serviceUrl: "https://zarkorjourney.co.il/contact" },
+    { "@type": "ServiceChannel", serviceUrl: "https://zarkor-journey.zorero.workers.dev/contact" },
   ],
-  description: "תהליך אימון אישי לגברים המתמקד בקבלת החלטות, חיבור רגשי ויצירת שינוי מעשי.",
+  description: "תהליך אימון אישי לגברים באשדוד או בזום, בנושאי מודעות רגשית, תקשורת בזוגיות, הורות, קריירה וקבלת החלטות. השירות הוא אימון אישי ולא טיפול נפשי.",
 };
 
 export default function CoachingPage() {
@@ -41,7 +43,7 @@ export default function CoachingPage() {
     <main>
       <PageHero eyebrow="אימון אישי לגברים" title="אתה לא צריך להמשיך להחזיק הכול לבד.">
         <p>
-          אימון הוא מקום שבו אפשר להניח לרגע את התפקידים, לבדוק מה אתה
+          אימון אישי לגברים בזרקור, בקליניקה באשדוד או בזום, הוא מקום שבו אפשר להניח לרגע את התפקידים, לבדוק מה אתה
           מרגיש ומה אתה רוצה, ולתרגם את ההבנה לצעדים במציאות.
         </p>
       </PageHero>
