@@ -5,9 +5,16 @@ import { ElementorMotion } from "./components/ElementorMotion";
 import { TestimonialCarousel } from "./components/TestimonialCarousel";
 
 export const metadata: Metadata = {
-  title: "זרקור | אימון אישי עם אביחי",
-  description: "זרקור: אימון אישי עם אביחי צוררו. המסע שלי החל בתור לקוח, והיום אני כאן לעזור לך להתחיל את שלך.",
+  title: "זרקור | אימון אישי לגברים באשדוד ובזום | אביחי צוררו",
+  description: "אימון אישי לגברים עם אביחי צוררו בקליניקה באשדוד או בזום. תהליך של 12 מפגשים לחיבור לרגשות, קבלת החלטות ושינוי מעשי בחיים.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "זרקור | אימון אישי לגברים באשדוד ובזום | אביחי צוררו",
+    description: "אימון אישי לגברים עם אביחי צוררו בקליניקה באשדוד או בזום. תהליך של 12 מפגשים לחיבור לרגשות, קבלת החלטות ושינוי מעשי בחיים.",
+    url: "/",
+    type: "website",
+    locale: "he_IL",
+  },
 };
 
 const qualities = [
