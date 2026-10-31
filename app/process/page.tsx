@@ -4,10 +4,16 @@ import { CallToAction } from "../components/CallToAction";
 import { PageHero } from "../components/PageHero";
 
 export const metadata: Metadata = {
-  title: "תהליך האימון",
-  description:
-    "כך נראה תהליך האימון האישי בזרקור: 12 מפגשים, מטרות ברורות, עבודה רגשית ומשימות שמחברות בין התובנות לחיים עצמם.",
+  title: "תהליך אימון אישי לגברים | 12 מפגשים בזרקור",
+  description: "איך נראה תהליך אימון אישי בזרקור ? הכירו תהליך בן 12 מפגשים עם אביחי צוררו: זיהוי דפוסים, בחירה בצעדים מעשיים וכלים להמשך הדרך.",
   alternates: { canonical: "/process" },
+  openGraph: {
+    title: "תהליך אימון אישי לגברים | 12 מפגשים בזרקור",
+    description: "איך נראה תהליך אימון אישי בזרקור ? הכירו תהליך בן 12 מפגשים עם אביחי צוררו: זיהוי דפוסים, בחירה בצעדים מעשיים וכלים להמשך הדרך.",
+    url: "/process",
+    type: "website",
+    locale: "he_IL",
+  },
 };
 
 const steps = [
