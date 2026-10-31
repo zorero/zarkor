@@ -4,10 +4,16 @@ import { CallToAction } from "../components/CallToAction";
 import { PageHero } from "../components/PageHero";
 
 export const metadata: Metadata = {
-  title: "אימון אישי לגברים",
-  description:
-    "אימון אישי לגברים בצמתי החלטה, זוגיות, קריירה והורות. תהליך ישיר ורגיש שמחבר בין חשיבה, רגש ופעולה.",
+  title: "אימון אישי לגברים | זוגיות, רגשות וקבלת החלטות",
+  description: "מרגיש תקוע בזוגיות, בקריירה או בקבלת החלטות ? אימון אישי לגברים עם אביחי צוררו באשדוד או בזום, בשיחה ישירה ובקצב שמתאים לך.",
   alternates: { canonical: "/coaching-for-men" },
+  openGraph: {
+    title: "אימון אישי לגברים | זוגיות, רגשות וקבלת החלטות",
+    description: "מרגיש תקוע בזוגיות, בקריירה או בקבלת החלטות ? אימון אישי לגברים עם אביחי צוררו באשדוד או בזום, בשיחה ישירה ובקצב שמתאים לך.",
+    url: "/coaching-for-men",
+    type: "website",
+    locale: "he_IL",
+  },
 };
 
 const areas = [
