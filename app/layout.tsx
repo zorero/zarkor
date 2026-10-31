@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://zarkor-journey.zorero.workers.dev"),
   title: {
     default: "זרקור | אימון אישי לגברים עם אביחי",
-    template: "%s | זרקור",
+    template: "%s",
   },
   description:
     "אימון אישי לגברים שרוצים לעצור, להתחבר לעצמם ולבחור את הדרך שלהם. עם אביחי צוררו, באשדוד או בזום.",
@@ -37,7 +37,7 @@ const structuredData = {
       name: "זרקור",
       alternateName: "Zarkor Journey",
       url: "https://zarkor-journey.zorero.workers.dev/",
-      logo: "https://zarkor-journey.zorero.workers.dev/images/zarkor-logo.svg",
+      logo: "https://zarkor-journey.zorero.workers.dev/images/elementor/zarkor-logo-1.svg",
       founder: { "@id": "https://zarkor-journey.zorero.workers.dev/#avihai" },
       sameAs: [
         "https://www.facebook.com/zarkor.life.coaching",
