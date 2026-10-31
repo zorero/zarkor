@@ -32,13 +32,20 @@ const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "LocalBusiness"],
       "@id": "https://zarkor-journey.zorero.workers.dev/#organization",
-      name: "זרקור",
+      name: "זרקור - אימון אישי",
       alternateName: "Zarkor Journey",
       url: "https://zarkor-journey.zorero.workers.dev/",
       logo: "https://zarkor-journey.zorero.workers.dev/images/elementor/zarkor-logo-1.svg",
       founder: { "@id": "https://zarkor-journey.zorero.workers.dev/#avihai" },
+      telephone: "+972-52-826-0661",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "שדרות הרצל 1",
+        addressLocality: "אשדוד",
+        addressCountry: "IL",
+      },
       sameAs: [
         "https://www.facebook.com/zarkor.life.coaching",
         "https://www.instagram.com/zarkor_life_coaching/",
