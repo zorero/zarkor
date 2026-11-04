@@ -62,14 +62,15 @@ export default function Home() {
         </div>
         <div className="container source-hero-content">
           <div className="source-hero-brand" data-elementor-motion="fadeInUp" data-motion-delay="600"><Image src="/images/elementor/zarkor-logo-1.svg" width={340} height={230} alt="זרקור: מאמן לגברים, שנשים אוהבות" priority /></div>
-          <h1 data-elementor-motion="fadeIn" data-motion-delay="800">המסע שלי החל בתור לקוח. היום, אני כאן כדי לעזור לך להתחיל את שלך.</h1>
-          <p>חוויתי על בשרי את הכוח של אימון אישי. אחרי שנים של חיפוש, מצאתי את הכלים והתמיכה ששינו את חיי מקצה לקצה. היום, אני כאן כדי להעביר את זה הלאה ולעזור לך להשיג את מה שחשוב לך.</p>
+          <h1 data-elementor-motion="fadeIn" data-motion-delay="800">אימון אישי לגברים, באשדוד או בזום</h1>
+          <p>כשקשה לקבל החלטה, כשמשהו בזוגיות או בהורות לא מסתדר, או כשאתה מרגיש שהגיע הזמן לשינוי.</p>
+          <p>אני אביחי. המסע שלי בעולם האימון התחיל כמתאמן. היום אני מלווה גברים שרוצים להבין טוב יותר את עצמם ולבחור איך להתקדם.</p>
         </div>
       </section>
 
       <section className="source-qualities">
         <div className="container">
-          <h2 data-elementor-motion="fadeIn" data-motion-delay="600">עם ניסיון של 7 שנים בליווי אנשים בתהליכי טרנספורמציה, אני מביא איתי:</h2>
+          <h2 data-elementor-motion="fadeIn" data-motion-delay="600">כבר כשלוש שנים אני מאמן גברים, וכשבע שנים מלווה משפחות בעמותת פעמונים. בשנתיים האחרונות אני גם ראש צוות של מלווי משפחות בעמותה.</h2>
           <div className="source-qualities-grid">
             {qualities.map(item => <article key={item.title}><h3 data-elementor-motion="fadeIn" data-motion-delay="400">{item.title}</h3><p data-elementor-motion="fadeIn" data-motion-delay="600">{item.text}</p></article>)}
           </div>
