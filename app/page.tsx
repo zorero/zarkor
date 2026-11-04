@@ -70,7 +70,8 @@ export default function Home() {
 
       <section className="source-qualities">
         <div className="container">
-          <h2 data-elementor-motion="fadeIn" data-motion-delay="600">כבר כשלוש שנים אני מאמן גברים, וכשבע שנים מלווה משפחות בעמותת פעמונים. בשנתיים האחרונות אני גם ראש צוות של מלווי משפחות בעמותה.</h2>
+          <h2 data-elementor-motion="fadeIn" data-motion-delay="600" style={{ marginBottom: "20px" }}>שבע שנות ניסיון בליווי אנשים בתהליכי שינוי</h2>
+          <p style={{ maxWidth: "930px", margin: "0 auto 50px", fontSize: "clamp(1.4rem, 2vw, 1.85rem)", lineHeight: 1.6 }}>בשלוש השנים האחרונות אני מאמן גברים. לצד האימון, אני מתנדב בפעמונים כשבע שנים בליווי משפחות, ובשנתיים האחרונות גם כראש צוות של מלווים.</p>
           <div className="source-qualities-grid">
             {qualities.map(item => <article key={item.title}><h3 data-elementor-motion="fadeIn" data-motion-delay="400">{item.title}</h3><p data-elementor-motion="fadeIn" data-motion-delay="600">{item.text}</p></article>)}
           </div>
